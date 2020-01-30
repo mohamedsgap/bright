@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale='1'">
+    <title>Sass And Pug</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  </head>
+  <body>
+    <!-- Start header-->
+    <header class="pt-2 pb-2 d-none d-lg-block">
+      <div class="container">
+        <div class="row">
+          <div class="location col-4"><i class="fa fa-map-marker mr-2"></i>Sydney NSW 2052, Australia  </div>
+          <div class="contactalogin col-8 text-right"> <i class="fa fa-phone mr-2 ml-3"></i>01158685662<i class="fa fa-envelope mr-2 ml-3"></i>mohamed@yahoo.com    <i class="fa fa-user mr-2 ml-3"></i><a href="login.html">Login </a>/ <a href="register.html">Register  </a></div>
+        </div>
+      </div>
+    </header>
+    <!-- End Header-->
+    <!-- Start Navbar-->
+    <!-- Search Overlay-->
+    <div class="search-overlay position-fixed w-100 h-100 p-4 align-items-center justify-content-center">
+      <button class="close close-search-overlay position-absolute"><span>&times;</span></button>
+      <div class="input-group w-75">
+        <input class="form-control rounded-0 pt-4 pb-4" type="search" placeholder="Search For Something">
+        <div class="input-group-append d-flex justify-content-center pt-4 pb-4"><i class="fas fa-search"></i></div>
+      </div>
+    </div>
+    <!-- Navbar        -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white p-0 d-flex align-items-center py-0">
+      <div class="container"><a class="navbar-brand p-0" href="#"><img src="imgs/logo/logo.png"></a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#n-links"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="n-links">
+          <ul class="navbar-nav ml-auto align-items-center">
+            <li class="nav-item active position-relative"><a class="nav-link d-flex align-items-center py-0 px-3" href='index.html'>HOME<i class="fas fa-angle-down ml-2 fa-sm"></i><span class="sr-only">(current)</span></a>
+              <ul class="position-absolute list-unstyled bg-white dropdown-men">
+                <li class="drop"><a class="drop-link text-decoration-none text-dark d-block py-3 pl-3 active" href='index.html'>Home 1  (University)</a></li>
+                <li class="drop"><a class="drop-link text-decoration-none text-dark d-block py-3 pl-3" href="index2.html">Home 2  (Minimal)</a></li>
+                <li class="drop"><a class="drop-link text-decoration-none text-dark d-block py-3 pl-3 last" href="index3.html">Home 3  (LMS)</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link d-flex align-items-center py-0 px-3" href="course-details.html">COURSES</a></li>
+            <li class="nav-item"><a class="nav-link d-flex align-items-center py-0 px-3" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link d-flex align-items-center py-0 px-3" href="events.html">EVENTS</a></li>
+            <li class="nav-item position-relative"><a class="nav-link d-flex align-items-center py-0 px-3">SHOP<i class="fas fa-angle-down ml-2 fa-sm">       </i></a>
+              <ul class="position-absolute list-unstyled bg-white dropdown-men">
+                <li class="drop"><a class="drop-link text-decoration-none text-dark d-block py-3 pl-3 active" href="single-product.html">Single Product</a></li>
+                <li class="drop"><a class="drop-link text-decoration-none text-dark d-block py-3 pl-3" href="product-category.html">Product Category</a></li>
+                <li class="drop"><a class="drop-link text-decoration-none text-dark d-block py-3 pl-3 last" href="account.html">Account</a></li>
+              </ul>
+            </li>
+            <li class="nav-item position-relative"><a class="nav-link d-flex align-items-center py-0 px-3">BLOG<i class="fas fa-angle-down ml-2 fa-sm">       </i></a>
+              <ul class="position-absolute list-unstyled bg-white dropdown-men">
+                <li class="drop"><a class="drop-link text-decoration-none text-dark d-block py-3 pl-3 active" href="blog-single.html">Blog Single</a></li>
+                <li class="drop"><a class="drop-link text-decoration-none text-dark d-block py-3 pl-3 last" href="blog-author.html">Blog Author</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link d-flex align-items-center py-0 px-3" href="contact.html">CONTACT     </a></li>
+            <li class="search-btn nav-item ml-3 text-white d-flex justify-content-center align-items-center rounded-circle"><i class="fas fa-search"></i></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar-->
+    <!-- Start Banner-->
+    <div class="home3-panner position-relative d-flex align-items-center py-5">
+      <div class="container text-white"><span class="d-block mt-4 text-muted">AN AWARD WINNING INSTITUTE</span>
+        <h1 class="font-weight-bold my-4 pr-5">START LEARNING TENDING <br>TECHNOLOGIES</h1><span class="d-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</span><span class="d-block my-3">eiusmod tempor incididunt ut labore dolore</span>
+        <button class="mt-4 border-0 py-2 px-3 text-white">VIEW COURSES</button>
+      </div>
+    </div>
+    <!-- End Banner-->
+    <!-- Start Programs-->
+    <div class="fac-features py-5">
+      <div class="container text-center">
+        <div class="row justify-content-center">
+              <div class="col-sm-12 col-md-6 col-lg-4 p-3 text-center position-relative">
+                <div class="card rounded-0">
+                  <div class="card-body"><i class="fas fa-medal fa-3x mt-3 position-absolute d-flex justify-content-center align-items-center"></i>
+                    <h5 class="card-title mt-3">World-class Instructors</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae nulla debitis vitae temporibus enim sed.</p>
+                    <button class="pt-2 pb-2 pr-3 pl-3">EXPLORE</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-4 p-3 text-center position-relative">
+                <div class="card rounded-0">
+                  <div class="card-body"><i class="fas fa-vials fa-3x mt-3 position-absolute d-flex justify-content-center align-items-center"></i>
+                    <h5 class="card-title mt-3">Well Equipped Labs</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae nulla debitis vitae temporibus enim sed.</p>
+                    <button class="pt-2 pb-2 pr-3 pl-3">EXPLORE</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-4 p-3 text-center position-relative">
+                <div class="card rounded-0">
+                  <div class="card-body"><i class="fas fa-place-of-worship fa-3x mt-3 position-absolute d-flex justify-content-center align-items-center"></i>
+                    <h5 class="card-title mt-3">Best Infrastructure</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae nulla debitis vitae temporibus enim sed.</p>
+                    <button class="pt-2 pb-2 pr-3 pl-3">EXPLORE</button>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Programs-->
+    <!-- Start About Institute-->
+    <div class="about-institute py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6"><img class="w-100 h-100" src="imgs/home3/1.jpg"></div>
+          <div class="col-12 col-md-6 pl-4"><span class="text-muted mt-5 d-block">ABOUT INSTITUTE</span>
+            <h2 class="font-weight-bold my-3">Committed to Excellence</h2>
+            <p class="mt-4">Greenville identifies and develops the intellectual and creative talents of a diverse group of students. Within supportive and caring college preparatory environment, students are encouraged to achieve their finest in academics, athletics and the arts.</p>
+            <p class="my-4">Our ultimate goal is to teach students to live humanely within the community in order to prepare them to meet the demands and responsibilities of the future in the broader world.</p>
+            <button class="text-white py-3 px-4 border-0">LEARN MORE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End About Institute-->
+    <!-- Start Data-->
+    <div class="data py-5 position-relative">
+      <div class="container py-5">
+        <h2 class="text-white text-center mb-5">SOME IMPORTANT FACTS ABOUT US</h2>
+        <div class="row mb-5">
+              <div class="col-sm-12 col-md-6 col-lg-3 text-center"><i class="fas fa-users fa-3x text-white mt-4"></i><span class="text-white font-weight-bold d-block mt-4" id="first-data">0</span>
+                <hr class="w-25 mx-auto">
+                <address class="text-muted"> Enrolled Students</address>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-3 text-center"><i class="fas fa-trophy fa-3x text-white mt-4"></i><span class="text-white font-weight-bold d-block mt-4" id="second-data">0</span>
+                <hr class="w-25 mx-auto">
+                <address class="text-muted"> Education Awards</address>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-3 text-center"><i class="far fa-gem fa-3x text-white mt-4"></i><span class="text-white font-weight-bold d-block mt-4" id="third-data">0</span>
+                <hr class="w-25 mx-auto">
+                <address class="text-muted"> Certified Teachers</address>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-3 text-center"><i class="fas fa-flask fa-3x text-white mt-4"></i><span class="text-white font-weight-bold d-block mt-4" id="fourth-data">0</span>
+                <hr class="w-25 mx-auto">
+                <address class="text-muted"> Library and Labs</address>
+              </div>
+        </div>
+        <div class="my-4 text-center">
+          <button class="border-0 py-2 px-4 mr-1 text-white mt-3">CONTACT US</button>
+          <button class="py-2 px-4 ml-1 text-white border mt-3">ABOUT US  </button>
+        </div>
+      </div>
+    </div>
+    <!-- End Data-->
+    <!-- Start Featured Courses-->
+    <div class="home3-feature-courses feature-courses py-5">
+      <div class="container">
+        <h2 class="my-5 font-weight-bold w-100 text-center">FEATURED COURSES</h2>
+        <div class="owl-carousel">
+              <div class="p-3">
+                <div class="card border-0 position-relative p-0">
+                  <div class="position-relative">
+                    <div class="flex-column course-card-overlay position-absolute w-100 h-100 d-flex justify-content-center align-items-center">
+                      <p class="text-white">DURATION: 10 WEEK</p><span class="font-weight-bold">20 $</span>
+                    </div><img class="card-img-top w-100" src="imgs/home2/featured-courses/1.jpg">
+                  </div>
+                  <div class="teacher-con position-absolute w-100 pl-3 d-flex"><img class="rounded-circle" src="imgs/home2/featured-courses/t1.png"><strong class="text-muted align-self-end ml-3"><small class="font-weight-bold">By Swzan Mark</small></strong></div>
+                  <div class="card-body">
+                    <h5 class="card-title font-weight-bold mt-4">Web Programming</h5>
+                    <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    <button class="border-0 font-weight-bold pt-2 pb-2 pl-4 pr-4 mt-2 mb-2">DETAILS</button>
+                  </div>
+                </div>
+              </div>
+              <div class="p-3">
+                <div class="card border-0 position-relative p-0">
+                  <div class="position-relative">
+                    <div class="flex-column course-card-overlay position-absolute w-100 h-100 d-flex justify-content-center align-items-center">
+                      <p class="text-white">DURATION: 5 WEEK</p><span class="font-weight-bold">100 $</span>
+                    </div><img class="card-img-top w-100" src="imgs/home2/featured-courses/2.jpg">
+                  </div>
+                  <div class="teacher-con position-absolute w-100 pl-3 d-flex"><img class="rounded-circle" src="imgs/home2/featured-courses/t2.png"><strong class="text-muted align-self-end ml-3"><small class="font-weight-bold">By Paulo Mir</small></strong></div>
+                  <div class="card-body">
+                    <h5 class="card-title font-weight-bold mt-4">EcmaScript 6</h5>
+                    <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    <button class="border-0 font-weight-bold pt-2 pb-2 pl-4 pr-4 mt-2 mb-2">DETAILS</button>
+                  </div>
+                </div>
+              </div>
+              <div class="p-3">
+                <div class="card border-0 position-relative p-0">
+                  <div class="position-relative">
+                    <div class="flex-column course-card-overlay position-absolute w-100 h-100 d-flex justify-content-center align-items-center">
+                      <p class="text-white">DURATION: 10 WEEK</p><span class="font-weight-bold">200 $</span>
+                    </div><img class="card-img-top w-100" src="imgs/home2/featured-courses/3.jpg">
+                  </div>
+                  <div class="teacher-con position-absolute w-100 pl-3 d-flex"><img class="rounded-circle" src="imgs/home2/featured-courses/t3.png"><strong class="text-muted align-self-end ml-3"><small class="font-weight-bold">By Sawty Pill</small></strong></div>
+                  <div class="card-body">
+                    <h5 class="card-title font-weight-bold mt-4">Programming Skills</h5>
+                    <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    <button class="border-0 font-weight-bold pt-2 pb-2 pl-4 pr-4 mt-2 mb-2">DETAILS</button>
+                  </div>
+                </div>
+              </div>
+              <div class="p-3">
+                <div class="card border-0 position-relative p-0">
+                  <div class="position-relative">
+                    <div class="flex-column course-card-overlay position-absolute w-100 h-100 d-flex justify-content-center align-items-center">
+                      <p class="text-white">DURATION: 7 WEEK</p><span class="font-weight-bold">120 $</span>
+                    </div><img class="card-img-top w-100" src="imgs/home2/featured-courses/4.jpg">
+                  </div>
+                  <div class="teacher-con position-absolute w-100 pl-3 d-flex"><img class="rounded-circle" src="imgs/home2/featured-courses/t4.png"><strong class="text-muted align-self-end ml-3"><small class="font-weight-bold">By Markovic Alan</small></strong></div>
+                  <div class="card-body">
+                    <h5 class="card-title font-weight-bold mt-4">Android</h5>
+                    <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    <button class="border-0 font-weight-bold pt-2 pb-2 pl-4 pr-4 mt-2 mb-2">DETAILS</button>
+                  </div>
+                </div>
+              </div>
+              <div class="p-3">
+                <div class="card border-0 position-relative p-0">
+                  <div class="position-relative">
+                    <div class="flex-column course-card-overlay position-absolute w-100 h-100 d-flex justify-content-center align-items-center">
+                      <p class="text-white">DURATION: 20 WEEK</p><span class="font-weight-bold">250 $</span>
+                    </div><img class="card-img-top w-100" src="imgs/home2/featured-courses/5.jpg">
+                  </div>
+                  <div class="teacher-con position-absolute w-100 pl-3 d-flex"><img class="rounded-circle" src="imgs/home2/featured-courses/t5.png"><strong class="text-muted align-self-end ml-3"><small class="font-weight-bold">By Marcos Juan</small></strong></div>
+                  <div class="card-body">
+                    <h5 class="card-title font-weight-bold mt-4">Swift</h5>
+                    <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    <button class="border-0 font-weight-bold pt-2 pb-2 pl-4 pr-4 mt-2 mb-2">DETAILS</button>
+                  </div>
+                </div>
+              </div>
+              <div class="p-3">
+                <div class="card border-0 position-relative p-0">
+                  <div class="position-relative">
+                    <div class="flex-column course-card-overlay position-absolute w-100 h-100 d-flex justify-content-center align-items-center">
+                      <p class="text-white">DURATION: 15 WEEK</p><span class="font-weight-bold">300 $</span>
+                    </div><img class="card-img-top w-100" src="imgs/home2/featured-courses/6.jpeg">
+                  </div>
+                  <div class="teacher-con position-absolute w-100 pl-3 d-flex"><img class="rounded-circle" src="imgs/home2/featured-courses/t6.png"><strong class="text-muted align-self-end ml-3"><small class="font-weight-bold">By Maichael Jee</small></strong></div>
+                  <div class="card-body">
+                    <h5 class="card-title font-weight-bold mt-4">React.js</h5>
+                    <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    <button class="border-0 font-weight-bold pt-2 pb-2 pl-4 pr-4 mt-2 mb-2">DETAILS</button>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <button class="d-block mx-auto my-4 py-3 px-4 border-0 text-white">VIEW ALL COURSES</button>
+      </div>
+    </div>
+    <!-- End Featured Courses-->
+    <!-- Start Short Intro-->
+    <div class="video-overlay position-fixed d-flex justify-content-center align-items-center" id="intro-video">
+      <div class="embed-responsive embed-responsive-21by9">
+        <video class="embed-responsive-item" src="imgs/home3/video.mp4" allowfullscreen controls> </video>
+      </div>
+    </div>
+    <div class="short-intro py-5">
+      <div class="container">
+        <div class="row">
+          <div class="video col-12 col-md-6 p-5">
+            <div class="position-relative overflow-hidden" id="video-poster"><img class="w-100 h-100" src="imgs/home3/2.png"></div>
+          </div>
+          <div class="desc col-12 col-md-6 py-5 text-white"><span>A SHORT INTRO</span>
+            <h2 class="font-weight-bold my-3">About Our Vision</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  </p>
+            <button class="text-white py-3 px-5 border mt-4">GET STARTED NOW</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Short Intro-->
+    <!-- Start Blog-->
+    <div class="blog py-5 overflow-hidden">
+      <div class="container">
+        <h2 class="d-block w-100 text-center font-weight-bold">From The Blog</h2>
+        <div class="row mt-5">
+              <div class="px-3 my-3 col-sm-12 col-lg-6">
+                <div class="card border-0 position-relative p-0 flex-column flex-md-row shadow-lg">
+                  <div class="row"><img class="card-img-top w-100 d-none d-md-block col-md-6" src="imgs/blog/1.jpg">
+                    <div class="card-body col-12 col-md-4 col-12 col-md-6 pl-md-2 pl-5">
+                      <h5 class="card-title font-weight-bold mt-4">PHP Advance Course In Just 119$</h5><span class="my-2 d-block text-muted"><i class="far fa-calendar mr-2"></i>july 3, 17  </span>
+                      <p class="card-text">Lorem Ipsum is simply dummy text of the printing and…</p>
+                      <button class="border-0 py-2 px-3 my-2 text-white font-weight-bold">READ MORE</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="px-3 my-3 col-sm-12 col-lg-6">
+                <div class="card border-0 position-relative p-0 flex-column flex-md-row shadow-lg">
+                  <div class="row"><img class="card-img-top w-100 d-none d-md-block col-md-6" src="imgs/blog/2.jpg">
+                    <div class="card-body col-12 col-md-4 col-12 col-md-6 pl-md-2 pl-5">
+                      <h5 class="card-title font-weight-bold mt-4">How to Improve Your Communication Skill</h5><span class="my-2 d-block text-muted"><i class="far fa-calendar mr-2"></i>july 3, 17  </span>
+                      <p class="card-text">Lorem Ipsum is simply dummy text of the printing and…</p>
+                      <button class="border-0 py-2 px-3 my-2 text-white font-weight-bold">READ MORE</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="px-3 my-3 col-sm-12 col-lg-6">
+                <div class="card border-0 position-relative p-0 flex-column flex-md-row shadow-lg">
+                  <div class="row"><img class="card-img-top w-100 d-none d-md-block col-md-6" src="imgs/blog/3.jpg">
+                    <div class="card-body col-12 col-md-4 col-12 col-md-6 pl-md-2 pl-5">
+                      <h5 class="card-title font-weight-bold mt-4">Top 10 Books You Must Read in 2017</h5><span class="my-2 d-block text-muted"><i class="far fa-calendar mr-2"></i>july 3, 17  </span>
+                      <p class="card-text">Lorem Ipsum is simply dummy text of the printing and…</p>
+                      <button class="border-0 py-2 px-3 my-2 text-white font-weight-bold">READ MORE</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="px-3 my-3 col-sm-12 col-lg-6">
+                <div class="card border-0 position-relative p-0 flex-column flex-md-row shadow-lg">
+                  <div class="row"><img class="card-img-top w-100 d-none d-md-block col-md-6" src="imgs/blog/4.jpg">
+                    <div class="card-body col-12 col-md-4 col-12 col-md-6 pl-md-2 pl-5">
+                      <h5 class="card-title font-weight-bold mt-4">Is Big Data is New Big Career Path?</h5><span class="my-2 d-block text-muted"><i class="far fa-calendar mr-2"></i>july 3, 17  </span>
+                      <p class="card-text">Lorem Ipsum is simply dummy text of the printing and…</p>
+                      <button class="border-0 py-2 px-3 my-2 text-white font-weight-bold">READ MORE</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Blog-->
+    <!-- Start Testimonial-->
+    <div class="carousel slide d-none d-md-block testimonial position-relative pt-5 pb-5" id="slider2">
+      <div class="container pt-5 pb-5">
+        <h2 class="text-white d-block text-center font-weight-bold mb-5">What Our Students Say</h2>
+        <ul class="carousel-indicators mt-4 d-none d-md-flex">
+          <li class="active rounded-circle" data-target="#slider2" data-slide-to="0"></li>
+          <li class="rounded-circle" data-target="#slider2" data-slide-to="1"></li>
+        </ul>
+        <div class="carousel-inner">
+          <div class="carousel-item active pb-5">
+                <div class="w-50 p-3 float-left">
+                  <div class="position-relative bg-white p-5">
+                    <p class="text-center"> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                    <div class="position-absolute user-con w-100"><img class="rounded-circle ml-3" src="imgs/testimonial/c1.jpg">
+                      <address class="mt-3 mt-sm-5 mt-md-4 mt-lg-2 mb-1 text-muted">mohamed Mohammed ( Web Designer )</address>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-50 p-3 float-left">
+                  <div class="position-relative bg-white p-5">
+                    <p class="text-center"> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                    <div class="position-absolute user-con w-100"><img class="rounded-circle ml-3" src="imgs/testimonial/c2.jpg">
+                      <address class="mt-3 mt-sm-5 mt-md-4 mt-lg-2 mb-1 text-muted">Hossam Mohammed ( Web Developer )</address>
+                    </div>
+                  </div>
+                </div>
+          </div>
+          <div class="carousel-item pb-5">
+                <div class="w-50 p-3 float-left">
+                  <div class="position-relative bg-white p-5">
+                    <p class="text-center"> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                    <div class="position-absolute user-con w-100"><img class="rounded-circle ml-3" src="imgs/testimonial/c3.jpg">
+                      <address class="mt-3 mt-sm-5 mt-md-4 mt-lg-2 mb-1 text-muted">Belal Mohammed ( Mean Stack )</address>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-50 p-3 float-left">
+                  <div class="position-relative bg-white p-5">
+                    <p class="text-center"> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                    <div class="position-absolute user-con w-100"><img class="rounded-circle ml-3" src="imgs/testimonial/c4.jpg">
+                      <address class="mt-3 mt-sm-5 mt-md-4 mt-lg-2 mb-1 text-muted">Dani Lee ( Programmer )</address>
+                    </div>
+                  </div>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Testimonial -->
+    <!-- Start Apply-->
+    <div class="apply py-5">
+      <div class="container">
+        <div class="next-student shadow py-5 px-5">
+          <div class="row">
+            <div class="text col-12 col-lg-8 text-center text-lg-left"><span class="text-muted">Click here to apply</span>
+              <h2 class="font-weight-bold mt-2">Be The Next Bright Student</h2>
+            </div>
+            <div class="button col-12 col-lg-4 d-flex align-items-center justify-content-center justify-content-lg-end">
+              <button class="px-5 py-2 border-0 text-white mt-4">APPLY NOW  </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Apply -->
+    <!-- Start Footer Info-->
+    <div class="footer-info py-5">
+      <div class="container">
+        <div class="row">
+          <div class="contact-info col-12 col-md-6 col-lg-3">
+            <h5 class="text-white">CONTACT INFO</h5>
+            <p class="text-muted mt-5">A powerhouse of cutting-edge education, research & teaching in The World</p>
+            <ul class="list-unstyled mt-4">
+              <li class="my-3"><i class="fas fa-home fa-1x mr-2"></i>Sydney NSW 2052, Australia</li>
+              <li class="my-3"><i class="fas fa-phone fa-1x mr-2"></i>+61 2 9385 1000</li>
+              <li class="my-3"><i class="far fa-envelope fa-1x mr-2"></i>hello@brightuniversity.edu    </li>
+            </ul>
+          </div>
+          <div class="latest-news col-12 col-md-6 col-lg-3">
+            <h5 class="text-white">LATEST NEWS</h5>
+            <div class="mt-5"><img class="float-left mr-3" src="imgs/footer/1.jpg"><a class="text-decoration-none mb-2 d-block" href="#">How to Study Online Courses Effectively</a><span class="d-block w-100">November 15, 2016</span></div>
+            <div class="mt-5"><img class="float-left mr-3" src="imgs/footer/2.jpg"><a class="text-decoration-none mb-2 d-block" href="#">How to Study Online Courses Effectively</a><span class="d-block w-100">November 15, 2016  </span></div>
+          </div>
+          <div class="course-list col-12 col-md-6 col-lg-3 pl-4 mt-lg-0 mt-5">
+            <h5 class="text-white">CONTACT INFO</h5>
+            <ul class="list-unstyled mt-5">
+              <li class="my-3"><a class="text-decoration-none" href="#">Health Sciences</a></li>
+              <li class="my-3"><a class="text-decoration-none" href="#">Advance Javascript – ES6</a></li>
+              <li class="my-3"><a class="text-decoration-none" href="#">Android App Development</a></li>
+              <li class="my-3"><a class="text-decoration-none" href="#">Photoshop Design Like A PRO</a></li>
+              <li class="my-3"><a class="text-decoration-none" href="#">WordPress for Intermediate</a></li>
+              <li class="my-3"><a class="text-decoration-none" href="#">iOS App Development          </a></li>
+            </ul>
+          </div>
+          <div class="image-gallery col-12 col-md-6 col-lg-3 mt-lg-0 mt-5">
+            <h5 class="text-white">IMAGE GALLERY</h5>
+            <div class="d-flex justify-content-between flex-wrap mt-lg-5 mt-2"><img class="float-left mt-5 mt-lg-2" src="imgs/footer/3.jpg"><img class="float-left mt-5 mt-lg-2" src="imgs/footer/4.jpg"><img class="float-left mt-5 mt-lg-2" src="imgs/footer/5.jpg"><img class="float-left mt-3 mt-lg-2" src="imgs/footer/6.jpg"><img class="float-left mt-3 mt-lg-2" src="imgs/footer/7.jpg"><img class="float-left mt-3 mt-lg-2" src="imgs/footer/8.jpg"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Footer Info -->
+    <!-- Start Footer-->
+    <footer class="py-2">
+      <div class="container">
+        <div class="row align-items-center flex-column flex-md-row text-center text-lg-left">
+          <div class="col-lg-6 col-12">© Copyright Mego 2019</div>
+          <ul class="col-lg-6 col-12 list-inline mt-4 text-lg-right">
+            <li class="list-inline-item w-15 text-center"><a class="d-block w-100 h-100 text-white" href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="list-inline-item w-15 text-center"> <a class="d-block w-100 h-100 text-white" href="#"><i class="fab fa-twitter"></i></a></li>
+            <li class="list-inline-item w-15 text-center"> <a class="d-block w-100 h-100 text-white" href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            <li class="list-inline-item w-15 text-center"> <a class="d-block w-100 h-100 text-white" href="#"><i class="fab fa-google-plus-g"></i></a></li>
+            <li class="list-inline-item w-15 text-center"> <a class="d-block w-100 h-100 text-white" href="#"><i class="fab fa-youtube"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+    <!-- Start Back To Top button-->
+    <button class="b-t-t position-fixed text-center border-0 d-none"><i class="fas fa-angle-up fa-2x text-white"></i></button>
+    <!-- End Back To Top button-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/homeScript3.js"> </script>
+    <script src="js/owl.carousel.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale='1'">
+    <title>Sass And Pug</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  </head>
+  <body>
+    <!-- Start header-->
+    <header class="pt-2 pb-2 d-none d-lg-block">
+      <div class="container">
+        <div class="row">
+          <div class="location col-4"><i class="fa fa-map-marker mr-2"></i>Sydney NSW 2052, Australia  </div>
+          <div class="contactalogin col-8 text-right"> <i class="fa fa-phone mr-2 ml-3"></i>01158685662<i class="fa fa-envelope mr-2 ml-3"></i>mohamed@yahoo.com    <i class="fa fa-user mr-2 ml-3"></i><a href="login.html">Login </a>/ <a href="register.html">Register  </a></div>
+        </div>
+      </div>
+    </header>
+    <!-- End Header-->
+    <!-- Start Navbar-->
+    <!-- Search Overlay-->
+    <div class="search-overlay position-fixed w-100 h-100 p-4 align-items-center justify-content-center">
+      <button class="close close-search-overlay position-absolute"><span>&times;</span></button>
+      <div class="input-group w-75">
+        <input class="form-control rounded-0 pt-4 pb-4" type="search" placeholder="Search For Something">
+        <div class="input-group-append d-flex justify-content-center pt-4 pb-4"><i class="fas fa-search"></i></div>
+      </div>
+    </div>
+    <!-- Navbar        -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white p-0 d-flex align-items-center py-0">
+      <div class="container"><a class="navbar-brand p-0" href="#"><img src="imgs/logo/logo.png"></a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#n-links"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="n-links">
+          <ul class="navbar-nav ml-auto align-items-center">
+            <li class="nav-item active position-relative"><a href='index.html' class="nav-link d-flex align-items-center py-0 px-3">HOME<i class="fas fa-angle-down ml-2 fa-sm"></i><span class="sr-only">(current)</span></a>
+              <ul class="position-absolute list-unstyled bg-white dropdown-men">
+                <li class="drop"><a class="drop-link text-decoration-none text-dark d-block py-3 pl-3 active" href='index.html'>Home 1  (University)</a></li>
+                <li class="drop"><a class="drop-link text-decoration-none text-dark d-block py-3 pl-3" href="index2.html">Home 2  (Minimal)</a></li>
+                <li class="drop"><a class="drop-link text-decoration-none text-dark d-block py-3 pl-3 last" href="index3.html">Home 3  (LMS)</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link d-flex align-items-center py-0 px-3" href="course-details.html">COURSES</a></li>
+            <li class="nav-item"><a class="nav-link d-flex align-items-center py-0 px-3" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link d-flex align-items-center py-0 px-3" href="events.html">EVENTS</a></li>
+            <li class="nav-item position-relative"><a class="nav-link d-flex align-items-center py-0 px-3">SHOP<i class="fas fa-angle-down ml-2 fa-sm">       </i></a>
+              <ul class="position-absolute list-unstyled bg-white dropdown-men">
+                <li class="drop"><a class="drop-link text-decoration-none text-dark d-block py-3 pl-3 active" href="single-product.html">Single Product</a></li>
+                <li class="drop"><a class="drop-link text-decoration-none text-dark d-block py-3 pl-3" href="product-category.html">Product Category</a></li>
+                <li class="drop"><a class="drop-link text-decoration-none text-dark d-block py-3 pl-3 last" href="account.html">Account</a></li>
+              </ul>
+            </li>
+            <li class="nav-item position-relative"><a class="nav-link d-flex align-items-center py-0 px-3">BLOG<i class="fas fa-angle-down ml-2 fa-sm">       </i></a>
+              <ul class="position-absolute list-unstyled bg-white dropdown-men">
+                <li class="drop"><a class="drop-link text-decoration-none text-dark d-block py-3 pl-3 active" href="blog-single.html">Blog Single</a></li>
+                <li class="drop"><a class="drop-link text-decoration-none text-dark d-block py-3 pl-3 last" href="blog-author.html">Blog Author</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link d-flex align-items-center py-0 px-3" href="contact.html">CONTACT     </a></li>
+            <li class="search-btn nav-item ml-3 text-white d-flex justify-content-center align-items-center rounded-circle"><i class="fas fa-search"></i></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar-->
+    <!-- Start single-blog-main-->
+    <div class="single-blog">
+      <div class="container">
+        <div class="row">
+          <main class="col-12 col-lg-8 my-5">
+            <div class="improve bg-white pb-3"><img class="w-100 h-100 image-responsive" src="imgs/blog/1.1.jpg">
+              <h4 class="text-center my-3">How to Improve Your Communication Skill</h4>
+              <hr>
+              <ul class="list-unstyled px-3 d-flex align-items-start align-items-lg-center my-4 imp-list px-4 flex-column flex-lg-row"><a class="text-decoration-none" href="#">
+                  <li class="pt-1"> <img class="rounded-circle mr-2" src="imgs/blog/6.png"><small class="text-muted">Zabid</small></li></a>
+                <li class="ml-3 my-2 my-lg-1"><i class="far fa-clock mr-2 fa-sm"></i><small class="text-muted">July 3, 2017November 20, 2018</small></li><a class="text-decoration-none mx-3" href="#">
+                  <li> <i class="far fa-file-alt mr-2 fa-sm"></i><small class="text-muted">July 3, 2017November 20, 2018   </small></li></a><a class="text-decoration-none my-2 my-lg-1 mx-3 mx-lg-0" href="#">
+                  <li> <i class="far fa-comment-dots mr-2 fa-sm"></i><small class="text-muted">Add a Comment   </small></li></a>
+              </ul>
+              <p class="px-4"><span class="font-weight-bold mr-2">Lorem Ipsum</span>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.  </p>
+              <p class="px-4"><span class="font-weight-bold mr-2">Lorem Ipsum</span>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.  </p>
+            </div>
+            <div class="zabid bg-white my-3 p-4 d-flex flex-column flex-lg-row">
+              <div class="mr-4 text-center text-lg-left"><img class="rounded-circle" src="imgs/blog/1.2.jpeg"></div>
+              <div class="about-zabid pt-3 text-center text-lg-left">
+                <h4 class="font-weight-bold">zabid</h4>
+                <p class="text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                <ul class="list-unstyled d-flex social justify-content-center justify-content-lg-start">
+                      <li><a class="d-block d-flex align-items-center justify-content-center mx-2 text-decoration-none text-dark" href="#"><i class="fab fa-facebook-f fa-sm"></i></a></li>
+                      <li><a class="d-block d-flex align-items-center justify-content-center mx-2 text-decoration-none text-dark" href="#"><i class="fab fa-twitter fa-sm"></i></a></li>
+                      <li><a class="d-block d-flex align-items-center justify-content-center mx-2 text-decoration-none text-dark" href="#"><i class="fab fa-google-plus-g fa-sm"></i></a></li>
+                      <li><a class="d-block d-flex align-items-center justify-content-center mx-2 text-decoration-none text-dark" href="#"><i class="fab fa-linkedin-in fa-sm"></i></a></li>
+                      <li><a class="d-block d-flex align-items-center justify-content-center mx-2 text-decoration-none text-dark" href="#"><i class="fab fa-youtube fa-sm"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="n-and-p d-flex justify-content-between px-3 py-4 my-3 bg-white">
+              <button class="btn px-3 py-2 text-white rounded-0">PREVIOUS</button>
+              <button class="btn px-3 py-2 text-white rounded-0">NEXT</button>
+            </div>
+            <div class="single-blog-form bg-white py-4 px-3">
+              <h3 class="display-6">Leave a Reply </h3>
+              <p class="text-muted">Your email address will not be published. Required fields are marked *</p>
+              <form>
+                <label class="d-block">Comment</label>
+                <textarea class="w-100 shadow-sm p-2 rounded-0 border-0 border-bottom"> </textarea>
+                <label class="d-block mt-4">Name *</label>
+                <input class="w-100 py-2 p-2" type="text">
+                <label class="d-block mt-4">Email *</label>
+                <input class="w-100 py-2 p-2" type="email">
+                <label class="d-block mt-4">Website</label>
+                <input class="d-block w-100 py-2 p-2" type="text">
+                <button class="mt-4 btn text-white rounded-0 py-2 px-3">POST COMMENT    </button>
+              </form>
+            </div>
+          </main>
+              <aside class="my-5 col-12 col-lg-4">
+                <div class="search bg-white px-3 py-4">
+                  <input class="text-left w-100 btn border rounded-0" type="search" placeholder="Search ...">
+                </div>
+                <div class="blog-cat bg-white my-3 p-3">
+                  <h4 class="font-weight-bold">Categories</h4>
+                  <ul class="list-unstyled cat-ul">
+                        <li class="border-bottom"><a class="d-block py-3 text-decoration-none" href="#"><i class="fas fa-chevron-right mr-2 fa-sm"></i>College    </a></li>
+                        <li class="border-bottom"><a class="d-block py-3 text-decoration-none" href="#"><i class="fas fa-chevron-right mr-2 fa-sm"></i>Online Education    </a></li>
+                        <li class="border-bottom"><a class="d-block py-3 text-decoration-none" href="#"><i class="fas fa-chevron-right mr-2 fa-sm"></i>Programming    </a></li>
+                        <li class="border-bottom"><a class="d-block py-3 text-decoration-none" href="#"><i class="fas fa-chevron-right mr-2 fa-sm"></i>School    </a></li>
+                        <li class="border-bottom"><a class="d-block py-3 text-decoration-none" href="#"><i class="fas fa-chevron-right mr-2 fa-sm"></i>Uncategorized    </a></li>
+                        <li class="border-bottom"><a class="d-block py-3 text-decoration-none" href="#"><i class="fas fa-chevron-right mr-2 fa-sm"></i>University    </a></li>
+                  </ul>
+                </div>
+                <div class="blog-cat bg-white my-3 p-3">
+                  <h4 class="font-weight-bold">Archives</h4>
+                  <ul class="list-unstyled cat-ul">
+                        <li class="border-bottom"><a class="d-block py-3 text-decoration-none" href="#"><i class="fas fa-chevron-right mr-2 fa-sm"></i>September 2017    </a></li>
+                        <li class="border-bottom"><a class="d-block py-3 text-decoration-none" href="#"><i class="fas fa-chevron-right mr-2 fa-sm"></i>July 2017    </a></li>
+                        <li class="border-bottom"><a class="d-block py-3 text-decoration-none" href="#"><i class="fas fa-chevron-right mr-2 fa-sm"></i>January 2017    </a></li>
+                        <li class="border-bottom"><a class="d-block py-3 text-decoration-none" href="#"><i class="fas fa-chevron-right mr-2 fa-sm"></i>November 2016    </a></li>
+                  </ul>
+                </div>
+                <div class="bolg-tags bg-white my-3 p-3 d-none d-md-block">
+                  <h4 class="font-weight-bold">Tags   </h4>
+                  <ul class="list-unstyled mt-4">
+                    <div class="d-flex my-2">
+                      <li><a class="px-3 py-2 d-block text-decoration-none" href="#"> Content</a></li>
+                      <li class="mx-2"><a class="px-3 py-2 d-block text-decoration-none" href="#"> Css</a></li>
+                      <li><a class="px-3 py-2 d-block text-decoration-none" href="#"> Formatting</a></li>
+                    </div>
+                    <div class="d-flex my-2">
+                      <li><a class="px-3 py-2 d-block text-decoration-none mr-2" href="#"> Free Wordpress LMS Theme</a></li>
+                      <li><a class="px-3 py-2 d-block text-decoration-none" href="#"> html</a></li>
+                    </div>
+                    <div class="d-flex my-2">
+                      <li><a class="px-3 py-2 d-block text-decoration-none" href="#"> markup</a></li>
+                      <li class="mx-2"><a class="px-3 py-2 d-block text-decoration-none" href="#"> Online Courses</a></li>
+                      <li><a class="px-3 py-2 d-block text-decoration-none" href="#"> Study</a></li>
+                    </div>
+                  </ul>
+                </div>
+                <div class="statistics mb-3 p-3 bg-white">
+                  <h4 class="font-weight-bold">Forum Statistics</h4>
+                  <ul class="list-unstyled mt-3">
+                        <li class="d-flex justify-content-between align-items-center my-3"><span class="text-muted">Registered Users</span>
+                          <div class="badge badge-secondary rounded-pill">287</div>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center my-3"><span class="text-muted">Forums</span>
+                          <div class="badge badge-secondary rounded-pill">5</div>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center my-3"><span class="text-muted">Topics</span>
+                          <div class="badge badge-secondary rounded-pill">21</div>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center my-3"><span class="text-muted">Replies</span>
+                          <div class="badge badge-secondary rounded-pill">21</div>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center my-3"><span class="text-muted">Topic Tags</span>
+                          <div class="badge badge-secondary rounded-pill">0</div>
+                        </li>
+                  </ul>
+                </div>
+                <div class="search bg-white px-3 py-4">
+                  <h4 class="font-weight-bold">Search Forums</h4>
+                  <input class="mt-3 text-left w-100 btn border rounded-0" type="search">
+                </div>
+                <div class="recent-topics my-3 p-3 bg-white">
+                  <h4 class="font-weight-bold">Recent Topics</h4>
+                  <ul class="list-unstyled">
+                        <li class="my-3"><a class="text-decoration-none" href="#"><i class="far fa-file-alt mr-3 fa-md text-muted"></i><span>hello from the awesome</span></a></li>
+                        <li class="my-3"><a class="text-decoration-none" href="#"><i class="far fa-file-alt mr-3 fa-md text-muted"></i><span>Gravida facilisis eleifend</span></a></li>
+                        <li class="my-3"><a class="text-decoration-none" href="#"><i class="far fa-file-alt mr-3 fa-md text-muted"></i><span>Gravida facilisis eleifend</span></a></li>
+                        <li class="my-3"><a class="text-decoration-none" href="#"><i class="far fa-file-alt mr-3 fa-md text-muted"></i><span>Gravida facilisis eleifend</span></a></li>
+                        <li class="my-3"><a class="text-decoration-none" href="#"><i class="far fa-file-alt mr-3 fa-md text-muted"></i><span>Gravida facilisis eleifend</span></a></li>
+                  </ul>
+                </div>
+                <div class="your-data p-3 bg-white">
+                  <form>
+                    <label class="d-block">Username:</label>
+                    <input class="w-100 py-1 px-2" type="text">
+                    <label class="d-block mt-3">Password:</label>
+                    <input class="w-100 py-1 px-2" type="password">
+                    <label class="mt-3">
+                      <input class="mr-2" type="checkbox"><span>Remember Me</span>
+                    </label>
+                    <button class="ml-auto d-block btn px-3 py-2 text-white rounded-0 mb-2">LOG IN</button>
+                  </form>
+                </div>
+              </aside>
+        </div>
+      </div>
+    </div>
+    <!-- End single-blog-main-->
+    <!-- Start Footer Info-->
+    <div class="footer-info py-5">
+      <div class="container">
+        <div class="row">
+          <div class="contact-info col-12 col-md-6 col-lg-3">
+            <h5 class="text-white">CONTACT INFO</h5>
+            <p class="text-muted mt-5">A powerhouse of cutting-edge education, research & teaching in The World</p>
+            <ul class="list-unstyled mt-4">
+              <li class="my-3"><i class="fas fa-home fa-1x mr-2"></i>Sydney NSW 2052, Australia</li>
+              <li class="my-3"><i class="fas fa-phone fa-1x mr-2"></i>+61 2 9385 1000</li>
+              <li class="my-3"><i class="far fa-envelope fa-1x mr-2"></i>hello@brightuniversity.edu    </li>
+            </ul>
+          </div>
+          <div class="latest-news col-12 col-md-6 col-lg-3">
+            <h5 class="text-white">LATEST NEWS</h5>
+            <div class="mt-5"><img class="float-left mr-3" src="imgs/footer/1.jpg"><a class="text-decoration-none mb-2 d-block" href="#">How to Study Online Courses Effectively</a><span class="d-block w-100">November 15, 2016</span></div>
+            <div class="mt-5"><img class="float-left mr-3" src="imgs/footer/2.jpg"><a class="text-decoration-none mb-2 d-block" href="#">How to Study Online Courses Effectively</a><span class="d-block w-100">November 15, 2016  </span></div>
+          </div>
+          <div class="course-list col-12 col-md-6 col-lg-3 pl-4 mt-lg-0 mt-5">
+            <h5 class="text-white">CONTACT INFO</h5>
+            <ul class="list-unstyled mt-5">
+              <li class="my-3"><a class="text-decoration-none" href="#">Health Sciences</a></li>
+              <li class="my-3"><a class="text-decoration-none" href="#">Advance Javascript – ES6</a></li>
+              <li class="my-3"><a class="text-decoration-none" href="#">Android App Development</a></li>
+              <li class="my-3"><a class="text-decoration-none" href="#">Photoshop Design Like A PRO</a></li>
+              <li class="my-3"><a class="text-decoration-none" href="#">WordPress for Intermediate</a></li>
+              <li class="my-3"><a class="text-decoration-none" href="#">iOS App Development          </a></li>
+            </ul>
+          </div>
+          <div class="image-gallery col-12 col-md-6 col-lg-3 mt-lg-0 mt-5">
+            <h5 class="text-white">IMAGE GALLERY</h5>
+            <div class="d-flex justify-content-between flex-wrap mt-lg-5 mt-2"><img class="float-left mt-5 mt-lg-2" src="imgs/footer/3.jpg"><img class="float-left mt-5 mt-lg-2" src="imgs/footer/4.jpg"><img class="float-left mt-5 mt-lg-2" src="imgs/footer/5.jpg"><img class="float-left mt-3 mt-lg-2" src="imgs/footer/6.jpg"><img class="float-left mt-3 mt-lg-2" src="imgs/footer/7.jpg"><img class="float-left mt-3 mt-lg-2" src="imgs/footer/8.jpg"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Footer Info-->
+    <!-- Start Footer-->
+    <footer class="py-2">
+      <div class="container">
+        <div class="row align-items-center flex-column flex-md-row text-center text-lg-left">
+          <div class="col-lg-6 col-12">© Copyright Mego 2019</div>
+          <ul class="col-lg-6 col-12 list-inline mt-4 text-lg-right">
+            <li class="list-inline-item w-15 text-center"><a class="d-block w-100 h-100 text-white" href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="list-inline-item w-15 text-center"> <a class="d-block w-100 h-100 text-white" href="#"><i class="fab fa-twitter"></i></a></li>
+            <li class="list-inline-item w-15 text-center"> <a class="d-block w-100 h-100 text-white" href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            <li class="list-inline-item w-15 text-center"> <a class="d-block w-100 h-100 text-white" href="#"><i class="fab fa-google-plus-g"></i></a></li>
+            <li class="list-inline-item w-15 text-center"> <a class="d-block w-100 h-100 text-white" href="#"><i class="fab fa-youtube"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+    <!-- Start Back To Top button-->
+    <button class="b-t-t position-fixed text-center border-0 d-none"><i class="fas fa-angle-up fa-2x text-white"></i></button>
+    <!-- End Back To Top button-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/account.js"> </script>
+  </body>
+</html>

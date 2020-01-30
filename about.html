@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale='1'">
+    <title>Sass And Pug</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <!-- Start header-->
+    <header class="pt-2 pb-2 d-none d-lg-block">
+      <div class="container">
+        <div class="row">
+          <div class="location col-4"><i class="fa fa-map-marker mr-2"></i>Sydney NSW 2052, Australia  </div>
+          <div class="contactalogin col-8 text-right"> <i class="fa fa-phone mr-2 ml-3"></i>01158685662<i class="fa fa-envelope mr-2 ml-3"></i>mohamed@yahoo.com    <i class="fa fa-user mr-2 ml-3"></i><a href="login.html">Login </a>/ <a href="register.html">Register  </a></div>
+        </div>
+      </div>
+    </header>
+    <!-- End Header-->
+    <!-- Start Navbar-->
+    <!-- Search Overlay-->
+    <div class="search-overlay position-fixed w-100 h-100 p-4 align-items-center justify-content-center">
+      <button class="close close-search-overlay position-absolute"><span>&times;</span></button>
+      <div class="input-group w-75">
+        <input class="form-control rounded-0 pt-4 pb-4" type="search" placeholder="Search For Something">
+        <div class="input-group-append d-flex justify-content-center pt-4 pb-4"><i class="fas fa-search"></i></div>
+      </div>
+    </div>
+    <!-- Navbar        -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white p-0 d-flex align-items-center py-0">
+      <div class="container"><a class="navbar-brand p-0" href="#"><img src="imgs/logo/logo.png"></a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#n-links"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="n-links">
+          <ul class="navbar-nav ml-auto align-items-center">
+            <li class="nav-item active position-relative"><a href='index.html' class="nav-link d-flex align-items-center py-0 px-3">HOME<i class="fas fa-angle-down ml-2 fa-sm"></i><span class="sr-only">(current)</span></a>
+              <ul class="position-absolute list-unstyled bg-white dropdown-men">
+                <li class="drop"><a class="drop-link text-decoration-none text-dark d-block py-3 pl-3 active" href='index.html'>Home 1  (University)</a></li>
+                <li class="drop"><a class="drop-link text-decoration-none text-dark d-block py-3 pl-3" href="index2.html">Home 2  (Minimal)</a></li>
+                <li class="drop"><a class="drop-link text-decoration-none text-dark d-block py-3 pl-3 last" href="index3.html">Home 3  (LMS)</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link d-flex align-items-center py-0 px-3" href="course-details.html">COURSES</a></li>
+            <li class="nav-item"><a class="nav-link d-flex align-items-center py-0 px-3" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link d-flex align-items-center py-0 px-3" href="events.html">EVENTS</a></li>
+            <li class="nav-item position-relative"><a class="nav-link d-flex align-items-center py-0 px-3">SHOP<i class="fas fa-angle-down ml-2 fa-sm">       </i></a>
+              <ul class="position-absolute list-unstyled bg-white dropdown-men">
+                <li class="drop"><a class="drop-link text-decoration-none text-dark d-block py-3 pl-3 active" href="single-product.html">Single Product</a></li>
+                <li class="drop"><a class="drop-link text-decoration-none text-dark d-block py-3 pl-3" href="product-category.html">Product Category</a></li>
+                <li class="drop"><a class="drop-link text-decoration-none text-dark d-block py-3 pl-3 last" href="account.html">Account</a></li>
+              </ul>
+            </li>
+            <li class="nav-item position-relative"><a class="nav-link d-flex align-items-center py-0 px-3">BLOG<i class="fas fa-angle-down ml-2 fa-sm">       </i></a>
+              <ul class="position-absolute list-unstyled bg-white dropdown-men">
+                <li class="drop"><a class="drop-link text-decoration-none text-dark d-block py-3 pl-3 active" href="blog-single.html">Blog Single</a></li>
+                <li class="drop"><a class="drop-link text-decoration-none text-dark d-block py-3 pl-3 last" href="blog-author.html">Blog Author</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link d-flex align-items-center py-0 px-3" href="contact.html">CONTACT     </a></li>
+            <li class="search-btn nav-item ml-3 text-white d-flex justify-content-center align-items-center rounded-circle"><i class="fas fa-search"></i></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar-->
+    <!-- Start Intro-->
+    <div class="intro py-5">
+      <div class="container">
+        <div class="row">
+          <div class="desc col-12 col-md-6">
+            <h3 class="font-weight-bold">Welcome To Bright University</h3>
+            <p class="my-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias laudantium nemo eveniet excepturi, suscipit amet illo autem quasi, sequi illum quisquam doloremque est magni accusamus quo, officia voluptates temporibus cum. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <ul class="p-0 mt-5">
+              <li class="list-unstyled my-3"><a class="text-decoration-none text-muted" href="#"><i class="fas fa-check mr-3"></i><span>Narwhal quinoa sriacha organic.</span></a></li>
+              <li class="list-unstyled my-3"><a class="text-decoration-none text-muted" href="#"><i class="fas fa-check mr-3"></i><span>Artisan paleo flannel, polaroid umami franzen.</span></a></li>
+              <li class="list-unstyled my-3"><a class="text-decoration-none text-muted" href="#"><i class="fas fa-check mr-3"></i><span>Sriracha vegan typewriter tofu gentrify.</span></a></li>
+              <li class="list-unstyled my-3"><a class="text-decoration-none text-muted" href="#"><i class="fas fa-check mr-3"></i><span>Artisan paleo flannel, polaroid umami franzen.</span></a></li>
+            </ul>
+          </div>
+          <div class="img col-12 col-md-6"><img class="w-100 h-100" src="imgs/blog/5.png" alt="Intro"></div>
+        </div>
+      </div>
+    </div>
+    <!-- End Intro-->
+    <!-- Start Student Say-->
+    <div class="student-say py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            <video class="w-100 h-100" src="imgs/home3/video.mp4" allowfullscreen controls></video>
+          </div>
+          <div class="accordion col-12 col-lg-6 ml-auto mt-5 mt-md-0">
+                <div class="card border-0 shadow-sm my-3">
+                  <div class="card-header p-0 d-flex" id="heading1">
+                    <button class="btn bg-white d-block w-100 h-100 text-left shadow-none" data-toggle="collapse" data-target="#collapse1" onclick="changePlus(event);">We have a team of experienced teachers</button><span class="bg-white d-flex align-items-center px-3 font-weight-bold">+</span>
+                  </div>
+                  <div class="collapse" id="collapse1">
+                    <div class="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit placeat inventore eum fuga minus consequuntur a facilis, fugiat molestiae dignissimos.</div>
+                  </div>
+                </div>
+                <div class="card border-0 shadow-sm my-3">
+                  <div class="card-header p-0 d-flex" id="heading2">
+                    <button class="btn bg-white d-block w-100 h-100 text-left shadow-none collapsed" data-toggle="collapse" data-target="#collapse2" onclick="changePlus(event);">Diversity training programs, curriculum understandable</button><span class="bg-white d-flex align-items-center px-3 font-weight-bold">+</span>
+                  </div>
+                  <div class="collapse" id="collapse2">
+                    <div class="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit placeat inventore eum fuga minus consequuntur a facilis, fugiat molestiae dignissimos.</div>
+                  </div>
+                </div>
+                <div class="card border-0 shadow-sm my-3">
+                  <div class="card-header p-0 d-flex" id="heading3">
+                    <button class="btn bg-white d-block w-100 h-100 text-left shadow-none collapsed" data-toggle="collapse" data-target="#collapse3" onclick="changePlus(event);">Learn everywhere, everytime on devices</button><span class="bg-white d-flex align-items-center px-3 font-weight-bold">+</span>
+                  </div>
+                  <div class="collapse" id="collapse3">
+                    <div class="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit placeat inventore eum fuga minus consequuntur a facilis, fugiat molestiae dignissimos.</div>
+                  </div>
+                </div>
+                <div class="card border-0 shadow-sm my-3">
+                  <div class="card-header p-0 d-flex" id="heading4">
+                    <button class="btn bg-white d-block w-100 h-100 text-left shadow-none collapsed" data-toggle="collapse" data-target="#collapse4" onclick="changePlus(event);">Brightcation promotion programs for outstanding students</button><span class="bg-white d-flex align-items-center px-3 font-weight-bold">+</span>
+                  </div>
+                  <div class="collapse" id="collapse4">
+                    <div class="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit placeat inventore eum fuga minus consequuntur a facilis, fugiat molestiae dignissimos.</div>
+                  </div>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Student Say-->
+    <!-- Start Footer Info-->
+    <div class="research-areas position-relative py-5">
+      <div class="container">
+        <div class="row">
+          <ul class="nav nav-tabs flex-column col-3">
+                <li class="nav-item"><a class="nav-link pb-3 text-dark font-weight-bold active" href="#why" data-toggle="tab">Why Bright</a></li>
+                <li class="nav-item"><a class="nav-link pb-3 text-dark font-weight-bold " href="#mission" data-toggle="tab">mission</a></li>
+                <li class="nav-item"><a class="nav-link pb-3 text-dark font-weight-bold " href="#vision" data-toggle="tab">vision</a></li>
+                <li class="nav-item"><a class="nav-link pb-3 text-dark font-weight-bold " href="#ranking" data-toggle="tab">ranking</a></li>
+                <li class="nav-item"><a class="nav-link pb-3 text-dark font-weight-bold " href="#research" data-toggle="tab">research</a></li>
+          </ul>
+          <div class="tab-content col-9">
+                <div class="tab-pane fade show active" id="why">
+                  <h2 class="font-weight-bold">Why Bright</h2>
+                  <p class="my-4 text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
+                  <ul class="list-unstyled mt-4">
+                        <li class="my-3"><i class="fas fa-check mr-2 font-weight-bold"></i>Lorem ipsum dolor sit amet consectetur adipiscing  </li>
+                        <li class="my-3"><i class="fas fa-check mr-2 font-weight-bold"></i>Lorem ipsum dolor sit amet consectetur adipiscing  </li>
+                        <li class="my-3"><i class="fas fa-check mr-2 font-weight-bold"></i>Lorem ipsum dolor sit amet consectetur adipiscing  </li>
+                        <li class="my-3"><i class="fas fa-check mr-2 font-weight-bold"></i>Lorem ipsum dolor sit amet consectetur adipiscing  </li>
+                  </ul>
+                </div>
+                <div class="tab-pane fade show" id="mission">
+                  <h2 class="font-weight-bold">mission</h2>
+                  <p class="my-4 text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
+                  <ul class="list-unstyled mt-4">
+                        <li class="my-3"><i class="fas fa-check mr-2 font-weight-bold"></i>Lorem ipsum dolor sit amet consectetur adipiscing  </li>
+                        <li class="my-3"><i class="fas fa-check mr-2 font-weight-bold"></i>Lorem ipsum dolor sit amet consectetur adipiscing  </li>
+                        <li class="my-3"><i class="fas fa-check mr-2 font-weight-bold"></i>Lorem ipsum dolor sit amet consectetur adipiscing  </li>
+                        <li class="my-3"><i class="fas fa-check mr-2 font-weight-bold"></i>Lorem ipsum dolor sit amet consectetur adipiscing  </li>
+                  </ul>
+                </div>
+                <div class="tab-pane fade show" id="vision">
+                  <h2 class="font-weight-bold">vision</h2>
+                  <p class="my-4 text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
+                  <ul class="list-unstyled mt-4">
+                        <li class="my-3"><i class="fas fa-check mr-2 font-weight-bold"></i>Lorem ipsum dolor sit amet consectetur adipiscing  </li>
+                        <li class="my-3"><i class="fas fa-check mr-2 font-weight-bold"></i>Lorem ipsum dolor sit amet consectetur adipiscing  </li>
+                        <li class="my-3"><i class="fas fa-check mr-2 font-weight-bold"></i>Lorem ipsum dolor sit amet consectetur adipiscing  </li>
+                        <li class="my-3"><i class="fas fa-check mr-2 font-weight-bold"></i>Lorem ipsum dolor sit amet consectetur adipiscing  </li>
+                  </ul>
+                </div>
+                <div class="tab-pane fade show" id="ranking">
+                  <h2 class="font-weight-bold">ranking</h2>
+                  <p class="my-4 text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
+                  <ul class="list-unstyled mt-4">
+                        <li class="my-3"><i class="fas fa-check mr-2 font-weight-bold"></i>Lorem ipsum dolor sit amet consectetur adipiscing  </li>
+                        <li class="my-3"><i class="fas fa-check mr-2 font-weight-bold"></i>Lorem ipsum dolor sit amet consectetur adipiscing  </li>
+                        <li class="my-3"><i class="fas fa-check mr-2 font-weight-bold"></i>Lorem ipsum dolor sit amet consectetur adipiscing  </li>
+                        <li class="my-3"><i class="fas fa-check mr-2 font-weight-bold"></i>Lorem ipsum dolor sit amet consectetur adipiscing  </li>
+                  </ul>
+                </div>
+                <div class="tab-pane fade show" id="research">
+                  <h2 class="font-weight-bold">research</h2>
+                  <p class="my-4 text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
+                  <ul class="list-unstyled mt-4">
+                        <li class="my-3"><i class="fas fa-check mr-2 font-weight-bold"></i>Lorem ipsum dolor sit amet consectetur adipiscing  </li>
+                        <li class="my-3"><i class="fas fa-check mr-2 font-weight-bold"></i>Lorem ipsum dolor sit amet consectetur adipiscing  </li>
+                        <li class="my-3"><i class="fas fa-check mr-2 font-weight-bold"></i>Lorem ipsum dolor sit amet consectetur adipiscing  </li>
+                        <li class="my-3"><i class="fas fa-check mr-2 font-weight-bold"></i>Lorem ipsum dolor sit amet consectetur adipiscing  </li>
+                  </ul>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Footer Info -->
+    <!-- Start Apply-->
+    <div class="apply py-5">
+      <div class="container">
+        <div class="next-student shadow py-5 px-5">
+          <div class="row">
+            <div class="text col-12 col-lg-8 text-center text-lg-left"><span class="text-muted">Click here to apply</span>
+              <h2 class="font-weight-bold mt-2">Be The Next Bright Student</h2>
+            </div>
+            <div class="button col-12 col-lg-4 d-flex align-items-center justify-content-center justify-content-lg-end">
+              <button class="px-5 py-2 border-0 text-white mt-4">APPLY NOW  </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Apply-->
+    <!-- Start Footer Info-->
+    <div class="footer-info py-5">
+      <div class="container">
+        <div class="row">
+          <div class="contact-info col-12 col-md-6 col-lg-3">
+            <h5 class="text-white">CONTACT INFO</h5>
+            <p class="text-muted mt-5">A powerhouse of cutting-edge education, research & teaching in The World</p>
+            <ul class="list-unstyled mt-4">
+              <li class="my-3"><i class="fas fa-home fa-1x mr-2"></i>Sydney NSW 2052, Australia</li>
+              <li class="my-3"><i class="fas fa-phone fa-1x mr-2"></i>+61 2 9385 1000</li>
+              <li class="my-3"><i class="far fa-envelope fa-1x mr-2"></i>hello@brightuniversity.edu    </li>
+            </ul>
+          </div>
+          <div class="latest-news col-12 col-md-6 col-lg-3">
+            <h5 class="text-white">LATEST NEWS</h5>
+            <div class="mt-5"><img class="float-left mr-3" src="imgs/footer/1.jpg"><a class="text-decoration-none mb-2 d-block" href="#">How to Study Online Courses Effectively</a><span class="d-block w-100">November 15, 2016</span></div>
+            <div class="mt-5"><img class="float-left mr-3" src="imgs/footer/2.jpg"><a class="text-decoration-none mb-2 d-block" href="#">How to Study Online Courses Effectively</a><span class="d-block w-100">November 15, 2016  </span></div>
+          </div>
+          <div class="course-list col-12 col-md-6 col-lg-3 pl-4 mt-lg-0 mt-5">
+            <h5 class="text-white">CONTACT INFO</h5>
+            <ul class="list-unstyled mt-5">
+              <li class="my-3"><a class="text-decoration-none" href="#">Health Sciences</a></li>
+              <li class="my-3"><a class="text-decoration-none" href="#">Advance Javascript – ES6</a></li>
+              <li class="my-3"><a class="text-decoration-none" href="#">Android App Development</a></li>
+              <li class="my-3"><a class="text-decoration-none" href="#">Photoshop Design Like A PRO</a></li>
+              <li class="my-3"><a class="text-decoration-none" href="#">WordPress for Intermediate</a></li>
+              <li class="my-3"><a class="text-decoration-none" href="#">iOS App Development          </a></li>
+            </ul>
+          </div>
+          <div class="image-gallery col-12 col-md-6 col-lg-3 mt-lg-0 mt-5">
+            <h5 class="text-white">IMAGE GALLERY</h5>
+            <div class="d-flex justify-content-between flex-wrap mt-lg-5 mt-2"><img class="float-left mt-5 mt-lg-2" src="imgs/footer/3.jpg"><img class="float-left mt-5 mt-lg-2" src="imgs/footer/4.jpg"><img class="float-left mt-5 mt-lg-2" src="imgs/footer/5.jpg"><img class="float-left mt-3 mt-lg-2" src="imgs/footer/6.jpg"><img class="float-left mt-3 mt-lg-2" src="imgs/footer/7.jpg"><img class="float-left mt-3 mt-lg-2" src="imgs/footer/8.jpg"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Footer Info-->
+    <!-- Start Footer-->
+    <footer class="py-2">
+      <div class="container">
+        <div class="row align-items-center flex-column flex-md-row text-center text-lg-left">
+          <div class="col-lg-6 col-12">© Copyright Mego 2019</div>
+          <ul class="col-lg-6 col-12 list-inline mt-4 text-lg-right">
+            <li class="list-inline-item w-15 text-center"><a class="d-block w-100 h-100 text-white" href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="list-inline-item w-15 text-center"> <a class="d-block w-100 h-100 text-white" href="#"><i class="fab fa-twitter"></i></a></li>
+            <li class="list-inline-item w-15 text-center"> <a class="d-block w-100 h-100 text-white" href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            <li class="list-inline-item w-15 text-center"> <a class="d-block w-100 h-100 text-white" href="#"><i class="fab fa-google-plus-g"></i></a></li>
+            <li class="list-inline-item w-15 text-center"> <a class="d-block w-100 h-100 text-white" href="#"><i class="fab fa-youtube"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+    <!-- Start Back To Top button-->
+    <button class="b-t-t position-fixed text-center border-0 d-none"><i class="fas fa-angle-up fa-2x text-white"></i></button>
+    <!-- End Back To Top button-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/about.js"> </script>
+  </body>
+</html>

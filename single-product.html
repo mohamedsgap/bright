@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale= 1">
+    <title>Sass And Pug</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/zoom-style.css">
+  </head>
+  <body>
+    <!-- Start header-->
+    <header class="pt-2 pb-2 d-none d-lg-block">
+      <div class="container">
+        <div class="row">
+          <div class="location col-4"><i class="fa fa-map-marker mr-2"></i>Sydney NSW 2052, Australia  </div>
+          <div class="contactalogin col-8 text-right"> <i class="fa fa-phone mr-2 ml-3"></i>01158685662<i class="fa fa-envelope mr-2 ml-3"></i>mohamed@yahoo.com    <i class="fa fa-user mr-2 ml-3"></i><a href="login.html">Login </a>/ <a href="register.html">Register  </a></div>
+        </div>
+      </div>
+    </header>
+    <!-- End Header-->
+    <!-- Start Navbar-->
+    <!-- Search Overlay-->
+    <div class="search-overlay position-fixed w-100 h-100 p-4 align-items-center justify-content-center">
+      <button class="close close-search-overlay position-absolute"><span>&times;</span></button>
+      <div class="input-group w-75">
+        <input class="form-control rounded-0 pt-4 pb-4" type="search" placeholder="Search For Something">
+        <div class="input-group-append d-flex justify-content-center pt-4 pb-4"><i class="fas fa-search"></i></div>
+      </div>
+    </div>
+    <!-- Navbar        -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white p-0 d-flex align-items-center py-0">
+      <div class="container"><a class="navbar-brand p-0" href="#"><img src="imgs/logo/logo.png"></a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#n-links"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="n-links">
+          <ul class="navbar-nav ml-auto align-items-center">
+            <li class="nav-item active position-relative"><a class="nav-link d-flex align-items-center py-0 px-3" href='index.html'>HOME<i class="fas fa-angle-down ml-2 fa-sm"></i><span class="sr-only">(current)</span></a>
+              <ul class="position-absolute list-unstyled bg-white dropdown-men">
+                <li class="drop"><a class="drop-link text-decoration-none text-dark d-block py-3 pl-3 active" href='index.html'>Home 1  (University)</a></li>
+                <li class="drop"><a class="drop-link text-decoration-none text-dark d-block py-3 pl-3" href="index2.html">Home 2  (Minimal)</a></li>
+                <li class="drop"><a class="drop-link text-decoration-none text-dark d-block py-3 pl-3 last" href="index3.html">Home 3  (LMS)</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link d-flex align-items-center py-0 px-3" href="course-details.html">COURSES</a></li>
+            <li class="nav-item"><a class="nav-link d-flex align-items-center py-0 px-3" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link d-flex align-items-center py-0 px-3" href="events.html">EVENTS</a></li>
+            <li class="nav-item position-relative"><a class="nav-link d-flex align-items-center py-0 px-3">SHOP<i class="fas fa-angle-down ml-2 fa-sm">       </i></a>
+              <ul class="position-absolute list-unstyled bg-white dropdown-men">
+                <li class="drop"><a class="drop-link text-decoration-none text-dark d-block py-3 pl-3 active" href="single-product.html">Single Product</a></li>
+                <li class="drop"><a class="drop-link text-decoration-none text-dark d-block py-3 pl-3" href="product-category.html">Product Category</a></li>
+                <li class="drop"><a class="drop-link text-decoration-none text-dark d-block py-3 pl-3 last" href="account.html">Account</a></li>
+              </ul>
+            </li>
+            <li class="nav-item position-relative"><a class="nav-link d-flex align-items-center py-0 px-3">BLOG<i class="fas fa-angle-down ml-2 fa-sm">       </i></a>
+              <ul class="position-absolute list-unstyled bg-white dropdown-men">
+                <li class="drop"><a class="drop-link text-decoration-none text-dark d-block py-3 pl-3 active" href="blog-single.html">Blog Single</a></li>
+                <li class="drop"><a class="drop-link text-decoration-none text-dark d-block py-3 pl-3 last" href="blog-author.html">Blog Author</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link d-flex align-items-center py-0 px-3" href="contact.html">CONTACT     </a></li>
+            <li class="search-btn nav-item ml-3 text-white d-flex justify-content-center align-items-center rounded-circle"><i class="fas fa-search"></i></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar-->
+    <!-- Start Main-->
+    <div class="single-product py-5 overflow-hidden">
+      <div class="container">
+        <div class="row">
+          <main class="col-12 col-lg-8">
+            <div class="row">
+              <div class="product-show col-12 bg-white p-4 shadow-sm">
+                <div class="row m-0">
+                  <div class="product-slider col-12 col-lg-7 overflow-hidden p-0">
+                    <ul class="current-product list-unstyled d-flex overflow-hidden">
+                          <li class="active" id="zoom-1"><img class="w-100 overflow-hidden" src="imgs/events/1.png" id="zoom_01"></li>
+                          <li id="zoom-2"><img class="w-100 overflow-hidden" src="imgs/events/2.png" id="zoom_02"></li>
+                          <li id="zoom-3"><img class="w-100 overflow-hidden" src="imgs/events/3.png" id="zoom_03"></li>
+                          <li id="zoom-4"><img class="w-100 overflow-hidden" src="imgs/events/4.png" id="zoom_04"></li>
+                          <li id="zoom-5"><img class="w-100 overflow-hidden" src="imgs/events/5.png" id="zoom_05"></li>
+                    </ul>
+                    <ul class="list-unstyled overflow-hidden mt-2">
+                      <div class="row">
+                            <li class="active col-4 px-0 my-1 px-1 clickSlide" data-show="#zoom-1"><img class="w-100" src="imgs/events/1.png"></li>
+                            <li class="col-4 px-0 my-1 px-1 clickSlide" data-show="#zoom-2"><img class="w-100" src="imgs/events/2.png"></li>
+                            <li class="col-4 px-0 my-1 px-1 clickSlide" data-show="#zoom-3"><img class="w-100" src="imgs/events/3.png"></li>
+                            <li class="col-4 px-0 my-1 px-1 clickSlide" data-show="#zoom-4"><img class="w-100" src="imgs/events/4.png"></li>
+                            <li class="col-4 px-0 my-1 px-1 clickSlide" data-show="#zoom-5"><img class="w-100" src="imgs/events/5.png"></li>
+                      </div>
+                    </ul>
+                  </div>
+                  <div class="product-desc col-12 col-lg-5 pl-3">
+                    <h2 class="font-weight-bold">Patient Ninja</h2><span class="h5 mb-3 mt-3 d-block">$35.00</span>
+                    <p class="text-muted">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                    <div class="number mt-4 text-center text-xl-left">
+                      <input class="border-0 px-2 py-3 w-100" type="number" min="1" max="5">
+                      <button class="border-0 py-3 px-4 text-white mt-3">ADD TO CART</button>
+                    </div>
+                    <hr class="mt-4">
+                    <p class="mb-1"> SKU: HOODIE-PATIENT-NINJA Categories: </p><a class="text-decoration-none" href="#">Clothing, Hoodies    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="s-p-desc col-12 bg-white p-4 shadow-sm mt-4">
+                <ul class="nav nav-tabs">
+                      <li class="nav-item"><a class="nav-link pb-3 text-dark font-weight-bold active" href="#desc" data-toggle="tab">Description</a></li>
+                      <li class="nav-item"><a class="nav-link pb-3 text-dark font-weight-bold " href="#reviews" data-toggle="tab">Reviews</a></li>
+                </ul>
+                <div class="tab-content">
+                      <div class="tab-pane fade show active pt-3" id="desc">
+                        <h4 class="font-weight-bold mt-3">Description</h4>
+                        <p class="my-3 text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged     </p>
+                      </div>
+                  <div class="tab-pane fade show pt-3" id="reviews">
+                    <h4 class="font-weight-bold mt-3">Reviews</h4><span class="my-4 d-block">There are no reviews yet.</span>
+                    <p>Be the first to review “Patient Ninja” <br> Your email address will not be published. Required fields are marked *</p>
+                    <address class="mt-4 mb-1">Overall Rating</address>
+                    <ul class="list-unstyled d-flex star-rating mt-0">
+                      <li>&#9733;</li>
+                      <li>&#9733;</li>
+                      <li>&#9733;</li>
+                      <li>&#9733;</li>
+                      <li>&#9733;</li>
+                    </ul>
+                    <form>
+                      <label class="d-block mb-3">Your review *</label>
+                      <textarea class="w-100 border-0 shadow-sm px-3 py-2"></textarea>
+                      <label class="d-block mt-4 mb-3">Name *</label>
+                      <input class="w-100 border-0 shadow-sm py-2 px-3" type="text">
+                      <label class="d-block mt-3 mb-3">Email *</label>
+                      <input class="w-100 border-0 shadow-sm py-2 px-3" type="text">
+                      <button class="border-0 py-3 px-5 text-white mt-4">SUBMIT</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="related-products col-12 p-4 mt-4">
+                <h3 class="mb-4 font-weight-bold">Related products</h3>
+                <div class="products-con d-flex mt-5">
+                  <div class="row justify-content-between">
+                        <div class="related-size col-sm-6 col-lg-4 overflow-hidden px-5 py-2 p-sm-2">
+                          <div class="shadow-sm"><img class="w-100" src="imgs/related-products/1.jpg">
+                            <div class="text-center py-4">
+                              <h5>Happy Ninja</h5>
+                              <p>$35.00</p>
+                              <button class="border-0 py-2 px-3 text-white">Add To Cart</button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="related-size col-sm-6 col-lg-4 overflow-hidden px-5 py-2 p-sm-2">
+                          <div class="shadow-sm"><img class="w-100" src="imgs/related-products/2.jpg">
+                            <div class="text-center py-4">
+                              <h5>Ship Your Idea</h5>
+                              <p>$20.00</p>
+                              <button class="border-0 py-2 px-3 text-white">Add To Cart</button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="related-size col-sm-6 col-lg-4 overflow-hidden px-5 py-2 p-sm-2">
+                          <div class="shadow-sm"><img class="w-100" src="imgs/related-products/3.jpg">
+                            <div class="text-center py-4">
+                              <h5>Woo Ninja</h5>
+                              <p>$10.00</p>
+                              <button class="border-0 py-2 px-3 text-white">Add To Cart</button>
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+          <aside class="col-12 col-lg-4 ml-auto">
+                <div class="bg-white p-3">
+                  <h4 class="font-weight-bold mb-4">Products</h4>
+                  <ul class="list-unstyled">
+                        <li class="my-3">
+                          <div class="row"><img class="col-3" src="imgs/related-products/4.jpg">
+                            <div class="col-8"><a class="h6 font-weight-bold d-block text-decoration-none mb-1" href="#">Patient Ninja</a><span>$35.00    </span></div>
+                          </div>
+                        </li>
+                        <li class="my-3">
+                          <div class="row"><img class="col-3" src="imgs/related-products/5.png">
+                            <div class="col-8"><a class="h6 font-weight-bold d-block text-decoration-none mb-1" href="#">Ship Your Idea</a><span>$15.00    </span></div>
+                          </div>
+                        </li>
+                        <li class="my-3">
+                          <div class="row"><img class="col-3" src="imgs/related-products/6.jpg">
+                            <div class="col-8"><a class="h6 font-weight-bold d-block text-decoration-none mb-1" href="#">Flying Ninja</a><span>$12.00    </span></div>
+                          </div>
+                        </li>
+                        <li class="my-3">
+                          <div class="row"><img class="col-3" src="imgs/related-products/7.jpg">
+                            <div class="col-8"><a class="h6 font-weight-bold d-block text-decoration-none mb-1" href="#">Premium Quality</a><span>$15.00    </span></div>
+                          </div>
+                        </li>
+                        <li class="my-3">
+                          <div class="row"><img class="col-3" src="imgs/related-products/8.jpg">
+                            <div class="col-8"><a class="h6 font-weight-bold d-block text-decoration-none mb-1" href="#">Woo Ninja</a><span>$15.00    </span></div>
+                          </div>
+                        </li>
+                  </ul>
+                </div>
+                <div class="bg-white p-3 mt-3">
+                  <h4 class="font-weight-bold mb-4">Products categories</h4>
+                  <ul class="list-unstyled">
+                        <li class="my-3"><a class="text-decoration-none font-weight-bold" href="#">Clothing</a>
+                          <ul class="list-unstyled">
+                            <li class="my-1 ml-2"><a class="text-decoration-none d-block" href="#">- Hoodies</a></li>
+                            <li class="my-1 ml-2"><a class="text-decoration-none d-block" href="#">- T-shirts        </a></li>
+                          </ul>
+                        </li>
+                        <li class="my-3"><a class="text-decoration-none font-weight-bold" href="#">Music</a>
+                          <ul class="list-unstyled">
+                            <li class="my-1 ml-2"><a class="text-decoration-none d-block" href="#">- Albumes</a></li>
+                            <li class="my-1 ml-2"><a class="text-decoration-none d-block" href="#">- Singles        </a></li>
+                          </ul>
+                        </li>
+                        <li class="my-3"><a class="text-decoration-none font-weight-bold" href="#">Posters</a>
+                          <ul class="list-unstyled">
+                            <li class="my-1 ml-2"><a class="text-decoration-none d-block" href="#">- Free</a></li>
+                            <li class="my-1 ml-2"><a class="text-decoration-none d-block" href="#">- Premium        </a></li>
+                          </ul>
+                        </li>
+                  </ul>
+                </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+    <!-- End Main-->
+    <!-- Start Footer Info-->
+    <div class="footer-info py-5">
+      <div class="container">
+        <div class="row">
+          <div class="contact-info col-12 col-md-6 col-lg-3">
+            <h5 class="text-white">CONTACT INFO</h5>
+            <p class="text-muted mt-5">A powerhouse of cutting-edge education, research & teaching in The World</p>
+            <ul class="list-unstyled mt-4">
+              <li class="my-3"><i class="fas fa-home fa-1x mr-2"></i>Sydney NSW 2052, Australia</li>
+              <li class="my-3"><i class="fas fa-phone fa-1x mr-2"></i>+61 2 9385 1000</li>
+              <li class="my-3"><i class="far fa-envelope fa-1x mr-2"></i>hello@brightuniversity.edu    </li>
+            </ul>
+          </div>
+          <div class="latest-news col-12 col-md-6 col-lg-3">
+            <h5 class="text-white">LATEST NEWS</h5>
+            <div class="mt-5"><img class="float-left mr-3" src="imgs/footer/1.jpg"><a class="text-decoration-none mb-2 d-block" href="#">How to Study Online Courses Effectively</a><span class="d-block w-100">November 15, 2016</span></div>
+            <div class="mt-5"><img class="float-left mr-3" src="imgs/footer/2.jpg"><a class="text-decoration-none mb-2 d-block" href="#">How to Study Online Courses Effectively</a><span class="d-block w-100">November 15, 2016  </span></div>
+          </div>
+          <div class="course-list col-12 col-md-6 col-lg-3 pl-4 mt-lg-0 mt-5">
+            <h5 class="text-white">CONTACT INFO</h5>
+            <ul class="list-unstyled mt-5">
+              <li class="my-3"><a class="text-decoration-none" href="#">Health Sciences</a></li>
+              <li class="my-3"><a class="text-decoration-none" href="#">Advance Javascript – ES6</a></li>
+              <li class="my-3"><a class="text-decoration-none" href="#">Android App Development</a></li>
+              <li class="my-3"><a class="text-decoration-none" href="#">Photoshop Design Like A PRO</a></li>
+              <li class="my-3"><a class="text-decoration-none" href="#">WordPress for Intermediate</a></li>
+              <li class="my-3"><a class="text-decoration-none" href="#">iOS App Development          </a></li>
+            </ul>
+          </div>
+          <div class="image-gallery col-12 col-md-6 col-lg-3 mt-lg-0 mt-5">
+            <h5 class="text-white">IMAGE GALLERY</h5>
+            <div class="d-flex justify-content-between flex-wrap mt-lg-5 mt-2"><img class="float-left mt-5 mt-lg-2" src="imgs/footer/3.jpg"><img class="float-left mt-5 mt-lg-2" src="imgs/footer/4.jpg"><img class="float-left mt-5 mt-lg-2" src="imgs/footer/5.jpg"><img class="float-left mt-3 mt-lg-2" src="imgs/footer/6.jpg"><img class="float-left mt-3 mt-lg-2" src="imgs/footer/7.jpg"><img class="float-left mt-3 mt-lg-2" src="imgs/footer/8.jpg"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Footer Info -->
+    <!-- Start Footer-->
+    <footer class="py-2">
+      <div class="container">
+        <div class="row align-items-center flex-column flex-md-row text-center text-lg-left">
+          <div class="col-lg-6 col-12">© Copyright Mego 2019</div>
+          <ul class="col-lg-6 col-12 list-inline mt-4 text-lg-right">
+            <li class="list-inline-item w-15 text-center"><a class="d-block w-100 h-100 text-white" href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="list-inline-item w-15 text-center"> <a class="d-block w-100 h-100 text-white" href="#"><i class="fab fa-twitter"></i></a></li>
+            <li class="list-inline-item w-15 text-center"> <a class="d-block w-100 h-100 text-white" href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            <li class="list-inline-item w-15 text-center"> <a class="d-block w-100 h-100 text-white" href="#"><i class="fab fa-google-plus-g"></i></a></li>
+            <li class="list-inline-item w-15 text-center"> <a class="d-block w-100 h-100 text-white" href="#"><i class="fab fa-youtube"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+    <!-- Start Back To Top button-->
+    <button class="b-t-t position-fixed text-center border-0 d-none"><i class="fas fa-angle-up fa-2x text-white"></i></button>
+    <!-- End Back To Top button-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.elevatezoom.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/single-product.js"> </script>
+  </body>
+</html>
