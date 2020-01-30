@@ -1,0 +1,16 @@
+include ../../mixins/Elements_stampa.pug
+
+.student-say.py-5
+  .container
+    .row
+      .col-12.col-lg-6
+        video(src="imgs/home3/video.mp4" allowfullscreen controls).w-100.h-100
+
+
+      .accordion.col-12.col-lg-6.ml-auto.mt-5.mt-md-0
+        +student-acc('heading1','#collapse1','','We have a team of experienced teachers','collapse1','+')
+        +student-acc('heading2','#collapse2','collapsed','Diversity training programs, curriculum understandable','collapse2','+')
+        +student-acc('heading3','#collapse3','collapsed','Learn everywhere, everytime on devices','collapse3','+')
+        +student-acc('heading4','#collapse4','collapsed','Brightcation promotion programs for outstanding students','collapse4','+')
+      
+         

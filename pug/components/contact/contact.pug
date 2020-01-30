@@ -1,0 +1,36 @@
+.messageAndContact.my-5
+  .container
+    .row
+      .message.col-12.col-lg-6.px-4.my-5.my-lg-0
+        h2.font-weight-bold Send A message
+        form
+          div.mt-4.d-flex.justify-content-between
+            input(type='text' placeholder='Your Name').p-2.border-0.shadow-sm
+            input(type='email' placeholder='Your Email').p-2.border-0.shadow-sm  
+            
+          textarea.w-100.my-3.shadow-sm.border-0.p-2(placeholder='Message')
+          button.btn.rounded-0.px-4.py-2.text-white SEND NOW  
+          
+      .contact-in.col-12.col-lg-6.px-4
+        h2.font-weight-bold Contact Info
+        p.mt-3 Aliquet id nunc cubilia sit enim fusce lacus enim nec, sed integer ac malesuada lectus etiam metus.
+        p Aliquet id nunc cubilia sit enim fusce lacus enim nec, sed integer ac malesuada lectus etiam metus.
+        p Aliquet id nunc cubilia sit enim fusce lacus enim nec, sed integer ac malesuada lectus etiam metus.
+        ul.list-unstyled
+          li.my-2 
+            i.fa.fa-map-marker.mr-2.fa-sm
+            small Sydney NSW 2052, Australia        
+            
+          li.my-2
+            i.fa.fa-phone.mr-2.fa-sm
+            small +61 2 9385 1000    
+
+          li.my-2
+            i.fa.fa-envelope.mr-2.fa-sm
+            small hello@brightuniversity.edu   
+      
+div.w-100
+  .mapouter.w-100
+    .gmap_canvas.w-100
+      iframe(width="100%" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=university%20of%20san%20francisco&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0")
+      

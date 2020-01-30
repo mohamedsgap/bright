@@ -1,0 +1,53 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content="width=device-width, initial-scale='1'" )
+    title Sass And Pug
+
+    include mixins/stylesheets.pug
+    link(rel='stylesheet' href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous")
+    link(rel='stylesheet' href="css/login.css")
+  body
+    // Start header
+    include components/header.pug 
+    // End Header
+    
+    // Start Navbar
+    include components/nav.pug
+    // End Navbar
+    
+    .login.my-5
+      .container
+        .row.justify-content-center
+          form.bg-white.col-11.col-lg-6.p-4
+            label Username or Email Address
+            input(type='text').w-100.p-2.border.mt-1
+            label.mt-3 Password
+            input(type='text').w-100.p-2.border.mt-1
+            label.mt-3
+              input(type='checkbox').mr-2
+              span Remember Me
+            button.btn.rounded-0.px-4.py-2.d-block.text-white.mt-3 LOG IN  
+            a(href='#').d-block.mt-3.text-muted.text-decoration-none Register
+            a(href='#').text-muted.text-decoration-none Lost your password?   
+          
+    
+    // Start Footer Info
+    include components/footer-info.pug
+    // End Footer Info
+    
+    // Start Footer
+    include components/footer.pug
+    // End Footer 
+    
+    // Start Back To Top button
+    include components/back-to-top.pug
+    // End Back To Top button
+    
+  
+    
+    script(src='js/jquery-3.3.1.min.js')
+    script(src='js/popper.min.js')
+    script(src='js/bootstrap.min.js')
+    script(src='js/login.js')  

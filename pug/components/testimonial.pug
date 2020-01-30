@@ -1,0 +1,17 @@
+include ../mixins/Elements_stampa.pug
+
+div(id='slider2' class='carousel slide d-none d-md-block').testimonial.position-relative.pt-5.pb-5
+  .container.pt-5.pb-5
+    h2.text-white.d-block.text-center.font-weight-bold.mb-5 What Our Students Say
+    ul.carousel-indicators.mt-4.d-none.d-md-flex
+      li(data-target='#slider2' data-slide-to='0').active.rounded-circle
+      li(data-target='#slider2' data-slide-to='1').rounded-circle
+  
+    .carousel-inner
+      .carousel-item.active.pb-5    
+        +testiCard('imgs/testimonial/c1.jpg','mohamed Mohammed', 'Web Designer')
+        +testiCard('imgs/testimonial/c2.jpg','Hossam Mohammed', 'Web Developer')
+      
+      .carousel-item.pb-5
+        +testiCard('imgs/testimonial/c3.jpg','Belal Mohammed', 'Mean Stack')
+        +testiCard('imgs/testimonial/c4.jpg','Dani Lee', 'Programmer')

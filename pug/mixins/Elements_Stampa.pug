@@ -1,0 +1,448 @@
+mixin programsCard(icon,title)
+  div.col-sm-12.col-md-6.col-lg-4.p-3.text-center.position-relative
+    .card.rounded-0
+      .card-body
+        i(class= icon).position-absolute.d-flex.justify-content-center.align-items-center
+        h5.card-title.mt-3 #{title}
+        p.card-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae nulla debitis vitae temporibus enim sed.
+        button.pt-2.pb-2.pr-3.pl-3 EXPLORE
+        
+mixin welcome_article(icon,title)
+  article.col-sm-12.col-lg-6.mt-4
+    div
+      i(class= icon).float-left.mr-4.text-center.rounded-circle
+    div
+      h5.font-weight-bold #{title}
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quaerat beatae.        
+
+mixin choose_university(icon, title)
+  div.col-sm-12.col-md-6.mt-5
+    .row
+      div.icon.col-sm-12.col-lg-3.text-center
+        i(class= icon).text-white.p-3.rounded-circle
+      article.desc.col-sm-12.col-lg-9
+        h5.font-weight-bold #{title}
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+mixin datas(iconName,desc,id)
+  div.col-sm-12.col-md-6.col-lg-3.text-center
+    i(class=iconName+' fa-3x text-white mt-4')
+    span.text-white.font-weight-bold.d-block.mt-4(id=id) 0
+    hr.w-25.mx-auto
+    address.text-muted  #{desc}
+    
+mixin member-card(imgSrc, name, job)
+  div.col-md-6.col-lg-4
+    .card.border-0.mt-4
+      img(src= imgSrc class='card-img-top')
+      .card-body
+        h4.card-title.font-weight-bold #{name}
+        address #{job}
+        p.card-text Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.  
+        ul.list-inline.d-flex.justify-content-between.mt-4
+          li.list-inline-item.w-15.text-center
+            a(href='#').text-dark.d-block.w-100.h-100.pt-2.pb-2
+              i.fab.fa-facebook-f
+          li.list-inline-item.w-15.text-center 
+            a(href='#').text-dark.d-block.w-100.h-100.pt-2.pb-2
+              i.fab.fa-twitter
+          li.list-inline-item.w-15.text-center 
+            a(href='#').text-dark.d-block.w-100.h-100.pt-2.pb-2
+              i.fab.fa-linkedin-in
+          li.list-inline-item.w-15.text-center 
+            a(href='#').text-dark.d-block.w-100.h-100.pt-2.pb-2
+              i.fab.fa-google-plus-g
+          li.list-inline-item.w-15.text-center 
+            a(href='#').text-dark.d-block.w-100.h-100.pt-2.pb-2
+              i.fab.fa-youtube
+        
+mixin testiCard(imgSrc,name,job)
+  div.w-50.p-3.float-left
+    div.position-relative.bg-white.p-5
+      p.text-center  is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+      div.position-absolute.user-con.w-100
+        img(src=imgSrc).rounded-circle.ml-3
+        address.mt-3.mt-sm-5.mt-md-4.mt-lg-2.mb-1.text-muted #{name} ( #{job} )
+
+
+
+mixin blogCard(imgSrc,title)
+  div.px-3.my-3.col-sm-12.col-lg-6
+    .card.border-0.position-relative.p-0.flex-column.flex-md-row.shadow-lg
+      .row
+        img(src= imgSrc class='card-img-top').w-100.d-none.d-md-block.col-md-6
+        .card-body.col-12.col-md-4.col-12.col-md-6.pl-md-2.pl-5
+          h5.card-title.font-weight-bold.mt-4 #{title}
+          span.my-2.d-block.text-muted
+            i.far.fa-calendar.mr-2
+            |july 3, 17  
+          p.card-text Lorem Ipsum is simply dummy text of the printing and…
+          button.border-0.py-2.px-3.my-2.text-white.font-weight-bold READ MORE
+
+mixin f_c_c(time,price,img1,img2,name,title)
+  div.p-3.col-sm-12.col-md-6.col-lg-4
+    .card.border-0.position-relative.p-0
+      div.position-relative
+        div.flex-column.course-card-overlay.position-absolute.w-100.h-100.d-flex.justify-content-center.align-items-center
+          p.text-white DURATION: #{time} WEEK
+          span.font-weight-bold #{price} $
+        img(src= img1 class='card-img-top').w-100
+      div.teacher-con.position-absolute.w-100.pl-3.d-flex
+        img(src= img2).rounded-circle
+        strong.text-muted.align-self-end.ml-3
+          small.font-weight-bold By #{name}
+      .card-body
+        h5.card-title.font-weight-bold.mt-4 #{title}
+        p.card-text Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+        button.border-0.font-weight-bold.pt-2.pb-2.pl-4.pr-4.mt-2.mb-2 DETAILS
+
+
+mixin f_c_c_slider(time,price,img1,img2,name,title)
+  div.p-3
+    .card.border-0.position-relative.p-0
+      div.position-relative
+        div.flex-column.course-card-overlay.position-absolute.w-100.h-100.d-flex.justify-content-center.align-items-center
+          p.text-white DURATION: #{time} WEEK
+          span.font-weight-bold #{price} $
+        img(src= img1 class='card-img-top').w-100
+      div.teacher-con.position-absolute.w-100.pl-3.d-flex
+        img(src= img2).rounded-circle
+        strong.text-muted.align-self-end.ml-3
+          small.font-weight-bold By #{name}
+      .card-body
+        h5.card-title.font-weight-bold.mt-4 #{title}
+        p.card-text Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+        button.border-0.font-weight-bold.pt-2.pb-2.pl-4.pr-4.mt-2.mb-2 DETAILS
+
+mixin lessons(icon,lessonName,duration)
+  li.px-3.d-flex.justify-content-between.align-items-center.py-4.border-bottom
+    div
+      i(class= icon).mr-2
+      a(href='#').text-decoration-none.text-dark.font-weight-light #{lessonName}
+    div
+      .badge.badge-success.mt-2 #{duration} min 
+      i.fas.fa-lock.ml-3
+                
+mixin c-f(icon,num,desc1,desc2)
+  li.d-flex.mt-4.align-items-center
+    p.m-0
+      i(class=icon +' mr-2')
+      |#{desc1}
+      
+    span.ml-auto #{num} #{desc2}        
+  
+mixin categories(icon,category)
+  li.d-flex.mt-3.align-items-center
+    i(class= icon).mr-2
+    a(href='#').text-dark.text-decoration-none #{category}
+            
+        
+mixin course-list(src,feild,name,num)
+  li.d-flex.mt-4
+    div.p-0.img: img(src= src).d-block.w-100.h-100.rounded-circle
+    div.col-8.p-0.pl-3
+      a(href='#').text-decoration-none.text-dark #{feild}
+      p.mt-1
+        i.fas.fa-user.mr-2
+        a(href='#').text-decoration-none.text-dark #{name} 
+        .
+          |  #{num} Student
+
+mixin teachers(src,job,name)
+  li.d-flex.mt-3
+    div.p-0.img: img(src= src).d-block.w-100.h-100.rounded-circle
+    div.col-8.p-0.pl-3
+      a(href='#').text-decoration-none.text-dark #{job}
+      p.mt-1
+        a(href='#').text-decoration-none.text-dark #{name}
+        
+mixin rated(stars,percentage,width)  
+  li.my-3
+    span.d-flex.justify-content-between.mb-1 #{stars} Stars 
+      strong.text-muted #{percentage}
+    .progress
+      .progress-bar.progress-bar-striped(aria-valuenow='100' aria-valuemin='0' aria-valuemax='100' style= 'width: '+ width +'%')  
+             
+mixin comment(img,name,rate)
+  .media.p-3.bg-light.border.my-3
+    img(src= img style='width: 50px; height: 50px').mr-3.rounded-circle
+    .media-body
+      h6 #{name}
+      ul.list-unstyled.d-flex.mb-2
+        -for(var x=1; x<= rate; x++)
+          li.stars: i.fas.fa-star.fa-sm
+      p.text-muted This Is A Very Very Good Course Here In This Site  
+      
+      
+mixin pans(href,active,text)
+  li.nav-item
+    a(href=href class='nav-link pb-3 text-dark font-weight-bold '+ active data-toggle='tab') #{text}
+
+mixin lidesc
+  li.my-3
+    i.fas.fa-check.mr-2.font-weight-bold
+    |Lorem ipsum dolor sit amet consectetur adipiscing  
+
+mixin tabs(id,heading,active)
+  .tab-pane.fade.show(id=id class=active)
+    h2.font-weight-bold #{heading}
+    p.my-4.text-muted Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged
+    ul.list-unstyled.mt-4
+      +lidesc
+      +lidesc
+      +lidesc
+      +lidesc 
+      
+mixin tabs2(id,heading,active)
+  .tab-pane.fade.show(id=id class=active).pt-3
+    h4.font-weight-bold.mt-3 #{heading}
+    p.my-3.text-muted Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged     
+      
+mixin student-acc(headingId,uniIdtarget,collapsedClass,btnContent,uniId,plusOrMinus)
+    .card.border-0.shadow-sm.my-3
+      .card-header.p-0.d-flex(id=headingId)
+        button.btn.bg-white.d-block.w-100.h-100.text-left.shadow-none(class=collapsedClass data-toggle='collapse' data-target=uniIdtarget onclick='changePlus(event);') #{btnContent}
+        span.bg-white.d-flex.align-items-center.px-3.font-weight-bold=plusOrMinus
+      .collapse(id=uniId)  
+        .card-body
+          |Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit placeat inventore eum fuga minus consequuntur a facilis, fugiat molestiae dignissimos.
+
+
+mixin eventCard(imgSrc,price,dateAndtime,title,link)
+  div.col-12.col-md-6.col-lg-4.my-3
+    .card.p-0.border-0.shadow
+      img(src=imgSrc).card-img-top
+      .card-body.p-0
+        .pricetime.border-bottom.d-flex
+          span.border-right.d-flex.align-items-center.py-2.px-3.font-weight-bold #{price}
+          address.m-0.pl-2.d-flex.align-items-center.text-muted.flex-grow-1 
+            i.far.fa-clock.mr-2.fa-xs
+            span #{dateAndtime}
+          
+        h5.font-weight-bold.mt-3.px-3 #{title}
+        p.px-3.py-1.text-muted Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.
+        a(href=link)
+          button.btn.ml-3.mb-3.px-4.py-2.text-white.font-weight-bold DETAILS    
+
+
+mixin event-details(title,date,time,imgSrc,text,btn1,btn2,cost,category,website,organizer,phone,email,orgWeb)
+  div.p-3.bg-white.mt-5
+    h2.font-weight-bold #{title}
+    span #{date} @ #{time} #{cost}
+    img(src=imgSrc).w-100.my-4
+    p.text-muted #{text}
+    button.btn.text-white.d-block.d-md-inline-block.my-3.mx-auto #{btn1}
+    button.btn.ml-2.text-white.d-block.d-md-inline-block.my-3.mx-auto #{btn2}
+    
+    .jumbotron.border.py-4.w-100.my-3.shadow-sm
+      .row
+        ul.list-unstyled.col-12.col-lg-4
+          h5.font-weight-bold.mb-4 DETAILS
+          li.my-1.d-flex
+            span.mr-2 Date : 
+            p #{date}
+          li.m1-2.d-flex
+             span.mr-2 Time :
+             p #{time}
+          li.my-1.d-flex
+             span.mr-2 Cost :
+             p #{cost}
+          li.my-1.d-flex
+             span.mr-2 Event : 
+             p Categories:   #{category}
+          li.mt-1.d-flex
+             span.mr-2 Website :  
+             p: a(href='#').text-decoration-none #{website}
+    
+        ul.list-unstyled.col-12.col-lg-8
+          h5.font-weight-bold.mb-4 Organizer : 
+          li.my-4 #{organizer}
+          li.my-4 Phone : #{phone}
+          li.my-4 Email : #{email}
+          li.mt-4 Website :     
+            a(href='#').text-decoration-none #{orgWeb}
+  
+    .jumbotron.w-100.border.shadow-sm
+      |Venue
+      
+    .evlinks.d-flex.justify-content-between.flex-column.flex-sm-row
+      a(href='#').text-decoration-none.text-dark.my-3.my-sm-0 « Camp Outdoor Activity
+      a(href='#').text-decoration-none.text-dark Students Research Results »  
+
+
+mixin sliderImage(src,id,dataI,active)
+  li(class=active id=id)
+    img(src=src id=dataI).w-100.overflow-hidden
+    
+mixin slidePoint(src,id,active)
+  li(data-show= id class=active).col-4.px-0.my-1.px-1.clickSlide
+    img(src=src).w-100
+    
+mixin productsLi(src,name,price)
+  li.my-3
+    .row
+      img(src=src).col-3
+      div.col-8
+        a.h6.font-weight-bold.d-block.text-decoration-none.mb-1(href='#') #{name}
+        span #{price}    
+        
+        
+mixin pro_categories(heading,cat1,cat2)
+  li(class='my-3')
+    a(href='#').text-decoration-none.font-weight-bold #{heading}
+    ul.list-unstyled
+      li.my-1.ml-2
+        a(href='#').text-decoration-none.d-block - #{cat1}
+      li.my-1.ml-2
+        a(href='#').text-decoration-none.d-block - #{cat2}        
+
+
+mixin related_Products(src,title,price)
+  div.related-size.col-sm-6.col-lg-4.overflow-hidden.px-5.py-2.p-sm-2
+    div.shadow-sm
+      img(src=src).w-100
+      div.text-center.py-4
+        h5 #{title}
+        p #{price}
+        button.border-0.py-2.px-3.text-white Add To Cart
+
+mixin paginationLi(active,content)
+    li.page-item.mx-1: a(href='#' class='page-link border-0 text-dark p-3 shadow-sm text-center' class=active) !{content}
+      
+
+mixin asideProducts
+  div.bg-white.p-3
+    h4.font-weight-bold.mb-4 Products
+    ul.list-unstyled
+      +productsLi('imgs/related-products/4.jpg','Patient Ninja','$35.00')
+      +productsLi('imgs/related-products/5.png','Ship Your Idea','$15.00')
+      +productsLi('imgs/related-products/6.jpg','Flying Ninja','$12.00')
+      +productsLi('imgs/related-products/7.jpg','Premium Quality','$15.00')
+      +productsLi('imgs/related-products/8.jpg','Woo Ninja','$15.00')
+
+mixin asideProCat
+  div.bg-white.p-3.mt-3
+    h4.font-weight-bold.mb-4 Products categories
+    ul.list-unstyled
+      +pro_categories('Clothing','Hoodies','T-shirts')
+      +pro_categories('Music','Albumes','Singles')
+      +pro_categories('Posters','Free','Premium')
+      
+      
+mixin social(icon)
+  li
+    a(href='#').d-block.d-flex.align-items-center.justify-content-center.mx-2.text-decoration-none.text-dark
+      i(class=icon).fa-sm
+          
+mixin blog-aside-cat-items(text)
+  li.border-bottom
+    a(href='#').d-block.py-3.text-decoration-none
+      i.fas.fa-chevron-right.mr-2.fa-sm
+      |#{text}    
+    
+mixin statistics-item(text,num)
+  li.d-flex.justify-content-between.align-items-center.my-3
+    span.text-muted #{text}
+    .badge.badge-secondary.rounded-pill #{num}
+
+mixin blog-recent-item(text)
+  li.my-3
+    a(href='#').text-decoration-none
+      i.far.fa-file-alt.mr-3.fa-md.text-muted
+      span #{text}
+              
+mixin blog-aside
+  aside.my-5.col-12.col-lg-4
+    .search.bg-white.px-3.py-4
+      input(type='search' placeholder='Search ...').text-left.w-100.btn.border.rounded-0
+    
+    .blog-cat.bg-white.my-3.p-3
+      h4.font-weight-bold Categories
+      ul.list-unstyled.cat-ul
+        +blog-aside-cat-items('College')
+        +blog-aside-cat-items('Online Education')
+        +blog-aside-cat-items('Programming')
+        +blog-aside-cat-items('School')
+        +blog-aside-cat-items('Uncategorized')
+        +blog-aside-cat-items('University')
+        
+    .blog-cat.bg-white.my-3.p-3
+      h4.font-weight-bold Archives
+      ul.list-unstyled.cat-ul
+        +blog-aside-cat-items('September 2017')
+        +blog-aside-cat-items('July 2017')
+        +blog-aside-cat-items('January 2017')
+        +blog-aside-cat-items('November 2016')
+        
+    .bolg-tags.bg-white.my-3.p-3.d-none.d-md-block
+      h4.font-weight-bold Tags   
+      ul.list-unstyled.mt-4
+        div.d-flex.my-2
+          li: a(href='#').px-3.py-2.d-block.text-decoration-none  Content
+          li.mx-2: a(href='#').px-3.py-2.d-block.text-decoration-none  Css
+          li: a(href='#').px-3.py-2.d-block.text-decoration-none  Formatting
+        div.d-flex.my-2
+          li: a(href='#').px-3.py-2.d-block.text-decoration-none.mr-2  Free Wordpress LMS Theme
+          li: a(href='#').px-3.py-2.d-block.text-decoration-none  html
+        div.d-flex.my-2
+          li: a(href='#').px-3.py-2.d-block.text-decoration-none  markup
+          li.mx-2: a(href='#').px-3.py-2.d-block.text-decoration-none  Online Courses
+          li: a(href='#').px-3.py-2.d-block.text-decoration-none  Study
+          
+    .statistics.mb-3.p-3.bg-white
+      h4.font-weight-bold Forum Statistics
+      ul.list-unstyled.mt-3
+        +statistics-item('Registered Users',287)
+        +statistics-item('Forums',5)
+        +statistics-item('Topics',21)
+        +statistics-item('Replies',21)
+        +statistics-item('Topic Tags',0)
+        
+    .search.bg-white.px-3.py-4
+      h4.font-weight-bold Search Forums
+      input(type='search').mt-3.text-left.w-100.btn.border.rounded-0
+      
+    .recent-topics.my-3.p-3.bg-white
+      h4.font-weight-bold Recent Topics
+      ul.list-unstyled
+        +blog-recent-item('hello from the awesome')
+        +blog-recent-item('Gravida facilisis eleifend')
+        +blog-recent-item('Gravida facilisis eleifend')
+        +blog-recent-item('Gravida facilisis eleifend')
+        +blog-recent-item('Gravida facilisis eleifend')
+        
+    .your-data.p-3.bg-white
+      form
+        label.d-block Username:
+        input(type='text').w-100.py-1.px-2 
+        label.d-block.mt-3 Password:
+        input(type='password').w-100.py-1.px-2 
+        label.mt-3
+          input(type='checkbox').mr-2
+          span Remember Me
+        button.ml-auto.d-block.btn.px-3.py-2.text-white.rounded-0.mb-2 LOG IN
+        
+mixin common-author-blog(src,title,history,topic,margin)
+  .improve.bg-white.pb-3(class=margin,'my-4')
+    img(src=src).w-100.h-100.image-responsive
+    h4.text-center.my-3 #{title}
+    hr
+    ul.list-unstyled.px-2.d-flex.align-items-start.align-items-lg-center.justify-content-center.my-4.imp-list.flex-column.flex-lg-row
+          
+      li.my-2.my-lg-1.mx-3.mx-lg-0
+        i.far.fa-clock.mr-2.fa-sm
+        small.text-muted #{history}
+          
+      a(href='#').text-decoration-none.mx-3
+        li 
+          i.far.fa-file-alt.mr-2.fa-sm
+          small.text-muted #{topic}
+          
+      a(href='#').text-decoration-none.my-2.my-lg-1.mx-3.mx-lg-0
+        li 
+          i.far.fa-comment-dots.mr-2.fa-sm
+          small.text-muted Add a Comment   
+                    
+    p.px-4
+     span.font-weight-bold.mr-2 Lorem Ipsum
+     |Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500.  

@@ -1,0 +1,22 @@
+
+include ../../mixins/Elements_stampa.pug     
+.research-areas.position-relative.py-5
+  .container
+    .row
+      ul.nav.nav-tabs.flex-column.col-3
+        +pans('#why','active','Why Bright')
+        +pans('#mission','','mission')
+        +pans('#vision','','vision')
+        +pans('#ranking','','ranking')
+        +pans('#research','','research')
+      .tab-content.col-9  
+        +tabs('why','Why Bright','active')
+        +tabs('mission','mission')
+        +tabs('vision','vision')
+        +tabs('ranking','ranking')
+        +tabs('research','research')
+        
+      
+            
+        
+      

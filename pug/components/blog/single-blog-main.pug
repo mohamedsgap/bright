@@ -1,0 +1,74 @@
+include ../../mixins/Elements_stampa.pug 
+.single-blog
+  .container
+    .row
+      main.col-12.col-lg-8.my-5
+        .improve.bg-white.pb-3
+          img(src='imgs/blog/1.1.jpg').w-100.h-100.image-responsive
+          h4.text-center.my-3 How to Improve Your Communication Skill
+          hr
+          ul.list-unstyled.px-3.d-flex.align-items-start.align-items-lg-center.my-4.imp-list.px-4.flex-column.flex-lg-row
+            a(href='#').text-decoration-none
+              li.pt-1 
+                img(src='imgs/blog/6.png').rounded-circle.mr-2
+                small.text-muted Zabid
+                
+            li.ml-3.my-2.my-lg-1
+              i.far.fa-clock.mr-2.fa-sm
+              small.text-muted July 3, 2017November 20, 2018
+                
+            a(href='#').text-decoration-none.mx-3
+              li 
+                i.far.fa-file-alt.mr-2.fa-sm
+                small.text-muted July 3, 2017November 20, 2018   
+                
+            a(href='#').text-decoration-none.my-2.my-lg-1.mx-3.mx-lg-0
+              li 
+                i.far.fa-comment-dots.mr-2.fa-sm
+                small.text-muted Add a Comment   
+                
+                    
+                
+          -for(var x = 1; x <= 2 ; x++)
+            p.px-4
+             span.font-weight-bold.mr-2 Lorem Ipsum
+             |is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.  
+          
+        .zabid.bg-white.my-3.p-4.d-flex.flex-column.flex-lg-row
+          div.mr-4.text-center.text-lg-left
+            img(src='imgs/blog/1.2.jpeg').rounded-circle
+            
+          .about-zabid.pt-3.text-center.text-lg-left
+            h4.font-weight-bold zabid
+            p.text-muted Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+              
+
+              
+            ul.list-unstyled.d-flex.social.justify-content-center.justify-content-lg-start
+              +social('fab fa-facebook-f')
+              +social('fab fa-twitter')  
+              +social('fab fa-google-plus-g')
+              +social('fab fa-linkedin-in')
+              +social('fab fa-youtube')      
+        
+        
+        div.n-and-p.d-flex.justify-content-between.px-3.py-4.my-3.bg-white
+          button.btn.px-3.py-2.text-white.rounded-0 PREVIOUS
+          button.btn.px-3.py-2.text-white.rounded-0 NEXT
+          
+        .single-blog-form.bg-white.py-4.px-3
+          h3.display-6 Leave a Reply 
+          p.text-muted Your email address will not be published. Required fields are marked *
+          form
+            label.d-block Comment
+            textarea.w-100.shadow-sm.p-2.rounded-0.border-0.border-bottom 
+            label.d-block.mt-4 Name *
+            input(type='text').w-100.py-2.p-2
+            label.d-block.mt-4 Email *
+            input(type='email').w-100.py-2.p-2
+            label.d-block.mt-4 Website
+            input(type='text').d-block.w-100.py-2.p-2
+            button.mt-4.btn.text-white.rounded-0.py-2.px-3 POST COMMENT    
+            
+            
+      +blog-aside

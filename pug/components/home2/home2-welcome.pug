@@ -1,0 +1,13 @@
+include ../../mixins/Elements_stampa.pug
+.welcome.py-5
+  .container
+    h2.d-block.w-100.h1.font-weight-bold.mt-5 Join the Crowd
+    p.text-muted.mt-3 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    .welcome-desc
+      .row
+        div.col-sm-12.col-xl-8
+          .row
+            +welcome_article('fa fa-code','Learn')
+            +welcome_article('fas fa-tv','Practice')
+            +welcome_article('fa fa-bullseye','Track')
+            +welcome_article('fa fa-briefcase','Work')

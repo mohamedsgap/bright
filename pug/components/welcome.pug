@@ -1,0 +1,13 @@
+include ../mixins/Elements_stampa.pug
+.welcome.py-5
+  .container
+    h2.d-block.w-100.h1.font-weight-bold.mt-5 Welecome To Bright University
+    p.text-muted.mt-3 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    .welcome-desc
+      .row
+        div.col-sm-12.col-xl-8
+          .row
+            +welcome_article('fab fa-bitbucket','Skilled Professors')
+            +welcome_article('fas fa-archway','Well Equipped Labs')
+            +welcome_article('fab fa-audible','Best Infrastructure')
+            +welcome_article('fas fa-atom','Big Library')

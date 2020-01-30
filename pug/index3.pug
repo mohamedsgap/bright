@@ -1,0 +1,72 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content="width=device-width, initial-scale='1'" )
+    title Sass And Pug
+    include mixins/stylesheets.pug 
+    include mixins/owlStylesheet.pug
+  body
+    // Start header
+    include components/header.pug 
+    // End Header
+    
+    // Start Navbar
+    include components/nav.pug
+    // End Navbar
+    
+    // Start Banner
+    include components/home3/home3-panner.pug 
+    // End Banner
+    
+    // Start Programs
+    include components/home3/home3-programs.pug
+    // End Programs
+    
+    // Start About Institute
+    include components/home3/about-institute.pug
+    // End About Institute
+    
+    // Start Data
+    include components/home3/data.pug
+    // End Data
+    
+    // Start Featured Courses
+    include components/home3/home3-featured-courses.pug
+    // End Featured Courses
+    
+    // Start Short Intro
+    include components/home3/short-intro.pug
+    // End Short Intro
+    
+    // Start Blog
+    include components/blog.pug
+    // End Blog
+    
+    // Start Testimonial
+    include components/testimonial.pug
+    // End Testimonial 
+    
+    // Start Apply
+    include components/home3/apply.pug
+    // End Apply 
+    
+    // Start Footer Info
+    include components/footer-info.pug
+    // End Footer Info 
+    
+    // Start Footer
+    include components/footer.pug
+    // End Footer 
+    
+    // Start Back To Top button
+    include components/back-to-top.pug
+    // End Back To Top button
+    
+  
+    
+    script(src='js/jquery-3.3.1.min.js')
+    script(src='js/popper.min.js')
+    script(src='js/bootstrap.min.js')
+    script(src='js/homeScript3.js')  
+    script(src='js/owl.carousel.min.js')

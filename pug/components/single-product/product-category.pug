@@ -1,0 +1,43 @@
+include ../../mixins/Elements_stampa.pug 
+.product-category.py-4
+  .container
+    .row
+      .pro-cat-con.col-12.col-lg-8
+        .showing.col-12.d-flex.justify-content-between.p-3.bg-white.shadow-sm.align-items-center.flex-column.flex-lg-row
+          span.my-2 Showing 1–9 of 10 results
+          select.form-control.my-2
+            option Sort By Popularity
+            option Sort By Average Rating
+            option Sort By Price : Low To High
+            option Sort By Price : High To Low
+              
+        .ava-products.py-4
+          .row
+            +related_Products('imgs/related-products/4.jpg','Patient Ninja','$35.00')
+            +related_Products('imgs/related-products/14.jpg','Patient Ninja','$20.00')
+            +related_Products('imgs/related-products/9.jpg','Patient Ninja','$15.00')
+            +related_Products('imgs/related-products/2.jpg','Patient Ninja','$23.00')
+            +related_Products('imgs/related-products/1.jpg','Patient Ninja','$30.00')
+            +related_Products('imgs/related-products/15.jpg','Patient Ninja','$40.00')
+            +related_Products('imgs/related-products/16.jpg','Patient Ninja','$27.00')
+            +related_Products('imgs/related-products/17.jpg','Patient Ninja','$32.00')
+            +related_Products('imgs/related-products/3.jpg','Patient Ninja','$12.00')
+
+    
+            div.d-flex.justify-content-center.col-12
+              ul.pagination.mt-5
+                +paginationLi('active',1)
+                +paginationLi('',2)
+                +paginationLi('',"<i class='fas fa-sm fa-chevron-right'></i>")
+      
+      aside.col-12.col-lg-4.px-5
+        div
+          .cart.bg-white.p-2
+            h5.font-weight-bold Cart
+            p.text-muted No products in the cart.
+          
+          .search-pro.bg-white.p-3.my-2
+            input(type='search' placeholder='Search For Product').form-control
+
+          +asideProducts
+          +asideProCat

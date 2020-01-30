@@ -1,0 +1,63 @@
+// Search Overlay
+.search-overlay.position-fixed.w-100.h-100.p-4.align-items-center.justify-content-center
+  button.close.close-search-overlay.position-absolute
+    span &times;
+  .input-group.w-75
+    input(type='search' placeholder='Search For Something').form-control.rounded-0.pt-4.pb-4
+    .input-group-append.d-flex.justify-content-center.pt-4.pb-4
+      i.fas.fa-search
+
+// Navbar        
+nav.navbar.navbar-expand-lg.navbar-light.bg-white.p-0.d-flex.align-items-center.py-0
+  .container
+    a(href='#' class='navbar-brand p-0')
+      img(src='imgs/logo/logo.png')
+    
+    button.navbar-toggler(data-toggle='collapse' data-target='#n-links')
+      span.navbar-toggler-icon
+        
+    div.collapse.navbar-collapse#n-links
+      ul.navbar-nav.ml-auto.align-items-center
+        li.nav-item.active.position-relative
+          a.nav-link.d-flex.align-items-center.py-0.px-3 HOME
+            i.fas.fa-angle-down.ml-2.fa-sm
+            span.sr-only (current)
+          ul.position-absolute.list-unstyled.bg-white.dropdown-men
+            li.drop: a(href='#').drop-link.text-decoration-none.text-dark.d-block.py-3.pl-3.active Home 1  (University)
+            li.drop: a(href='index2.html').drop-link.text-decoration-none.text-dark.d-block.py-3.pl-3 Home 2  (Minimal)
+            li.drop: a(href='index3.html').drop-link.text-decoration-none.text-dark.d-block.py-3.pl-3.last Home 3  (LMS)
+            
+        li.nav-item
+          a.nav-link.d-flex.align-items-center.py-0.px-3(href='course-details.html') COURSES
+          
+        li.nav-item
+          a.nav-link.d-flex.align-items-center.py-0.px-3(href='about.html') About
+              
+        li.nav-item
+          a.nav-link.d-flex.align-items-center.py-0.px-3(href='events.html') EVENTS
+                
+        li.nav-item.position-relative
+          a.nav-link.d-flex.align-items-center.py-0.px-3 SHOP
+            i.fas.fa-angle-down.ml-2.fa-sm        
+          ul.position-absolute.list-unstyled.bg-white.dropdown-men
+            li.drop: a(href='single-product.html').drop-link.text-decoration-none.text-dark.d-block.py-3.pl-3.active Single Product
+            li.drop: a(href='product-category.html').drop-link.text-decoration-none.text-dark.d-block.py-3.pl-3 Product Category
+            li.drop: a(href='account.html').drop-link.text-decoration-none.text-dark.d-block.py-3.pl-3.last Account
+                  
+        li.nav-item.position-relative
+          a.nav-link.d-flex.align-items-center.py-0.px-3 BLOG
+            i.fas.fa-angle-down.ml-2.fa-sm        
+          ul.position-absolute.list-unstyled.bg-white.dropdown-men
+            li.drop: a(href='blog-single.html').drop-link.text-decoration-none.text-dark.d-block.py-3.pl-3.active Blog Single
+            li.drop: a(href='blog-author.html').drop-link.text-decoration-none.text-dark.d-block.py-3.pl-3.last Blog Author
+    
+                
+        li.nav-item
+          a.nav-link.d-flex.align-items-center.py-0.px-3(href='contact.html') CONTACT     
+            
+        li.search-btn.nav-item.ml-3.text-white.d-flex.justify-content-center.align-items-center.rounded-circle
+          i.fas.fa-search
+            
+
+                      
+        

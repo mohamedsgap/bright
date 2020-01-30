@@ -1,0 +1,80 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content="width=device-width, initial-scale='1'" )
+    title Sass And Pug
+    include mixins/stylesheets.pug 
+  body
+    // Start header
+    include components/header.pug 
+    // End Header
+    
+    // Start Navbar
+    include components/nav.pug
+    // End Navbar
+    
+    // Start Banner
+    include components/home2/home2-panner.pug 
+    // End Banner
+    
+    // Start Programs
+    include components/home2/home2-programs.pug
+    // End Programs
+    
+    // Start Welcome
+    include components/home2/home2-welcome.pug
+    // End Welcome
+    
+    // Start Featured Courses
+    include components/home2/home2-featured-courses.pug
+    // End featured Courses
+    
+    // Start Free Training
+    include components/free-training.pug
+    // End Free Training
+    
+    // Start Choose University
+    include components/home2/home2-c-c.pug
+    // End Choose University
+    
+    // Start Data
+    include components/data.pug
+    // End Data
+    
+    // Start Featured Faculty Members
+    include components/home2/featured-instractors.pug
+    // End Featured Faculty Members  
+    
+    // Start Testimonial
+    include components/testimonial.pug
+    // End Testimonial 
+    
+    // Start Featured Faculty Members
+    include components/home2/parteners.pug
+    // End Featured Faculty Members 
+    
+    // Start Blog
+    include components/blog.pug
+    // End Blog
+    
+    // Start news
+    include components/news.pug
+    // End news 
+    
+    // Start Footer Info
+    include components/footer-info.pug
+    // End Footer Info 
+    
+    // Start Footer
+    include components/footer.pug
+    // End Footer 
+    
+    // Start Back To Top button
+    include components/back-to-top.pug
+    // End Back To Top button
+    
+  
+    
+    include mixins/bsScripts.pug  
+    

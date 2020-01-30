@@ -1,0 +1,172 @@
+include ../../mixins/Elements_stampa.pug 
+            
+.course-details.py-5
+  .container
+    .row
+      .main-course.col-12.col-xl-8
+        div.bg-white.shadow.p-3.mt-5.m-lg-0
+          h2.font-weight-bold Become a PHP Master
+          div.d-flex.mt-4
+            img(src='imgs/featured-faculty-members/1.jpg').rounded-circle.mr-3
+            span.border-right.pr-3  Teacher <br>JEN MARONEY
+            span.border-right.px-3  Categories <br> WEB DEVELOPMENT
+            
+          div.d-flex.mt-4
+            del.font-weight-bold.text-muted $99.00 
+            h4.mx-4.font-weight-bold.mt-2 Free
+            button.px-5.py-1.border-0.text-white Enroll
+            
+        div.my-3.shadow
+          img(src='imgs/home2/featured-courses/f.png').w-100.h-100       
+        
+        .course-features.overflow-hidden
+          .row.bg-white.shadow-sm
+            div.col-12.p-0
+              div.list-group.list-group-horizontal-lg.border-bottom.text-center#list-tab
+                a.list-group-item.list-group-item-action.border-0.active#list-home-list(data-toggle="list" href="#list-home") OVERVIEW
+                a.list-group-item.list-group-item-action.border-0#list-profile-list(data-toggle="list" href="#list-profile") CURRICULUM
+                a.list-group-item.list-group-item-action.border-0#list-messages-list(data-toggle="list" href="#list-messages") REVIEWS
+
+            div.col-12
+              div.tab-content#nav-tabContent.py-4.px-4      
+                div.tab-pane.fade.show.active#list-home(aria-labelledby="list-home-list")
+                  .row
+                    p.col-12.col-lg-7               
+                     strong Lorem Ipsum 
+                     | is simply dummy text of the printing and typesetting industry. 
+                     |Lorem Ipsum has been the industry’s standard dummy text ever 
+                     |since the 1500s, when an unknown printer took a galley of type and 
+                     |scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the 
+                     |release of Letraset sheets containing Lorem Ipsum passages, 
+                     |and more |recently  with desktop publishing software like Aldus
+                     br
+                     br  
+                     strong Lorem Ipsum 
+                     |is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                     |PageMaker including versions of Lorem Ipsum.  
+                    div.categories.col-12.col-lg-5
+                      div.p-0.pl-xl-4.border-0.border-left-xl
+                        h4.font-weight-bold Course Features
+                        ul.list-unstyled.p-0
+                          +c-f('fas fa-users',130,'Students','student')
+                          +c-f('fas fa-check',200,'Max Students','')
+                          +c-f('far fa-clock',12,'Duration','Week')
+                          +c-f('fas fa-level-up-alt','','Skill level','all')
+                          +c-f('fas fa-language','','Language','English')
+                          +c-f('fas fa-undo','3','Re-take course','')  
+                div.tab-pane.fade#list-profile(aria-labelledby="list-profile-list")
+                  hr.mx-auto
+                  ul.list-unstyled
+                    +lessons('fas fa-file-alt','01. Intro to Web development & PHP, Basic syntax',50)
+                    +lessons('fas fa-file-alt','02. Variables, Data types and Operators',30)      
+                        
+                    li.px-3.d-flex.justify-content-between.align-items-center.py-4.border-bottom
+                      div
+                        i.fas.fa-file-alt.mr-2
+                        a(href='#').text-decoration-none.text-dark.font-weight-light 03. Conditions & Control structures
+                      div
+                        .badge.badge-success.mt-2 30 min 
+                        .badge.badge-primary.mt-2 Preview
+                        i.fas.fa-lock.ml-3 
+                      
+                    +lessons('fas fa-file-alt','04. Arrays & Functions',20)
+                    +lessons('fas fa-file-alt','05. Forms, Session & Upload Handling',25)
+                    +lessons('fas fa-file-alt','06. Working with database',30)
+                    +lessons('fas fa-file-alt','07. Advanced database operations',37)
+                    +lessons('fas fa-file-alt','08. Project 1',10)
+                          
+                    li.px-3.d-flex.justify-content-between.align-items-center.py-4.border-bottom
+                      div
+                        i.far.fa-clock.mr-2
+                        a(href='#').text-decoration-none.text-dark.font-weight-light Quiz: 1
+                      div
+                        .badge.badge-danger 5 Questions
+                        .badge.badge-success.mt-2 30 min 
+                        i.fas.fa-lock.ml-3  
+                        
+                    +lessons('fas fa-file-alt','09. PHP Security, Best Practices & PSR',50)    
+                    +lessons('fas fa-file-alt','10. Working with cURL, Email & Report generation',40)    
+                    +lessons('fas fa-file-alt','11. Class, Objects & Magic methods',35)    
+                    +lessons('fas fa-file-alt','12. Encapsulation & Inheritance',28)    
+                    +lessons('fas fa-file-alt','13. Namespacing, Autoloading, Static & Constants',15)    
+                    +lessons('fas fa-file-alt','14. Interfaces & Abstractions',45)    
+                    +lessons('fas fa-file-alt','15. OOP review & What’s new in PHP 7',42)    
+                    +lessons('fas fa-file-alt','16.  Project 2',55)        
+                                              
+                    li.px-3.d-flex.justify-content-between.align-items-center.py-4.border-bottom
+                      div
+                        i.far.fa-clock.mr-2
+                        a(href='#').text-decoration-none.text-dark.font-weight-light Quiz: 2
+                      div
+                        .badge.badge-danger 5 Questions
+                        .badge.badge-success.mt-2 30 min 
+                        i.fas.fa-lock.ml-3
+                          
+                    +lessons('fas fa-file-alt','17. Composer & Packages, MVC & Frameworks',40)
+                    +lessons('fas fa-file-alt','18. Development environment',25)
+                    +lessons('fas fa-file-alt','19. Intro to Laravel 5.2: Routing, Controllers & View',80)    
+                    +lessons('fas fa-file-alt','20. Blade Templating',60)              
+                    +lessons('fas fa-file-alt','21. Migrations & Eloquent',40)                
+                    +lessons('fas fa-file-alt','22.  Basic Model/Controller/View Workflow',35)                    
+                    +lessons('fas fa-file-alt','23. Project 3',33)                          
+                    +lessons('fas fa-file-alt','24. What’s next?',33)      
+                          
+                    li.px-3.d-flex.justify-content-between.align-items-center.py-4.border-bottom
+                      div
+                        i.far.fa-clock.mr-2
+                        a(href='#').text-decoration-none.text-dark.font-weight-light Final Quiz
+                      div
+                        .badge.badge-danger 5 Questions
+                        .badge.badge-success.mt-2 30 min 
+                        i.fas.fa-lock.ml-3 
+                        
+                    +lessons('fas fa-file-alt','test quiz',15)    
+                div.tab-pane.fade#list-messages(aria-labelledby="list-messages-list")
+                  ul.list-unstyled.d-flex.stars
+                    -for(var x=1; x<=5; x++)
+                      li: i.fas.fa-star
+                  p.d-block 5.00 average based on 1 rating    
+                  ul.list-unstyled
+                    +rated(5,'100%',100)
+                    +rated(4,'75%',75)
+                    +rated(3,'50%',50)
+                    +rated(2,'25%',25)
+                    +rated(1,'10%',10)
+                  
+                  h5.font-weight-bold.mt-5 PREVIEWS                  
+                  .preview
+                    +comment('imgs/fcourses/t1.png','Nada Hosny',5)
+                    +comment('imgs/fcourses/t2.png','Maechael Doni',4)
+                    +comment('imgs/fcourses/t3.png','Sandra Ahmed',3)
+                    +comment('imgs/fcourses/t4.png','Carlos David',2)
+                    
+      div.course-list.col-12.col-xl-4
+        div.bg-white.p-3.shadow-sm.list.my-3.my-lg-0
+          h5.font-weight-bold.mt-2 Course List
+          ul.list-unstyled.p-0
+            +course-list('imgs/fcourses/1.png','Health Sciences','Sarah Robert',200)
+            +course-list('imgs/fcourses/2.png','Web Development','Sarah Robert',120)            
+            +course-list('imgs/fcourses/3.png','English Course','Sarah Robert',200)
+            +course-list('imgs/fcourses/4.png','Web Development','Sarah Robert',100)
+            
+        
+        div.bg-white.p-3.shadow-sm.my-3.teachers
+          h5.font-weight-bold.mt-2.mb-4 Course Teachers
+          ul.list-unstyled.p-0
+            +teachers('imgs/fcourses/t1.png','Health Scientist','Sarah Robert') 
+            +teachers('imgs/fcourses/t3.png','Web Developer','Lee Dawn') 
+            +teachers('imgs/fcourses/t4.png','Android Developer','Markovic') 
+
+          
+        div.categories
+          div.bg-white.p-3.shadow-sm.list
+            h5.font-weight-bold.mt-2.mb-4 Course Categories
+            ul.list-unstyled.p-0
+              +categories('fab fa-android','Apps Development')
+              +categories('fas fa-graduation-cap','Bachelor\'s Programs')
+              +categories('fas fa-laptop','Backend Programming')  
+              +categories('fab fa-adobe','Graphic Design')
+              +categories('fas fa-user-circle','Masters And Phd Programs')
+              +categories('fab fa-lastfm-square','Short Courses')  
+              +categories('fas fa-clipboard-list','Web Development')
+              +categories('fab fa-wordpress','Wordpress')

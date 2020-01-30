@@ -1,0 +1,38 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content="width=device-width, initial-scale='1'" )
+    title Sass And Pug
+    include mixins/stylesheets.pug 
+  body
+    // Start header
+    include components/header.pug 
+    // End Header
+    
+    // Start Navbar
+    include components/nav.pug
+    // End Navbar
+
+    // Start Event Info
+    include components/events/business-development-event.pug 
+    // End Event Info
+
+    // Start Footer Info
+    include components/footer-info.pug
+    // End Footer Info
+    
+    // Start Footer
+    include components/footer.pug
+    // End Footer 
+    
+    // Start Back To Top button
+    include components/back-to-top.pug
+    // End Back To Top button
+    
+  
+    
+    script(src='js/jquery-3.3.1.min.js')
+    script(src='js/popper.min.js')
+    script(src='js/bootstrap.min.js')
+    script(src='js/event.js')
