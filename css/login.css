@@ -1,0 +1,19 @@
+body{
+  background-color: #f9f9f9;
+}
+
+form input,form a{
+  transition: .4s;
+}
+form input:focus{
+  border: 1px solid #ff4f57 !important;
+}
+
+
+form a:hover{
+  color: #ff4f57 !important
+}
+
+form button{
+  background-color: #ff4f57 !important
+}

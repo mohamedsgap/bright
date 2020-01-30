@@ -1,0 +1,21 @@
+form input,
+form textarea {
+  background-color: #EEE;
+  border-bottom: 1px solid transparent !important;
+  transition: .4s; }
+form input {
+  width: 48%; }
+form textarea {
+  height: 250px; }
+form input:focus,
+form textarea:focus {
+  border-bottom: 1px solid #ff4f57 !important; }
+form button {
+  background-color: #ff4f57 !important; }
+
+.contact-in p {
+  color: #656565; }
+.contact-in i {
+  color: #ff4f57; }
+
+/*# sourceMappingURL=contact.css.map */

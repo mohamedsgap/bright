@@ -1,0 +1,102 @@
+body {
+  background-color: #f9f9f9; }
+
+.current-product + ul li {
+  cursor: pointer;
+  transition: .5s; }
+.current-product li {
+  width: 0; }
+.current-product li.active {
+  width: 100%; }
+
+.clickSlide {
+  opacity: 0.4; }
+
+.clickSlide.active {
+  opacity: 1; }
+
+.product-desc span, .product-desc a {
+  color: #ff4f57; }
+
+input[type='number'] {
+  background-color: #EEE; }
+  @media (min-width: 1280px) {
+    input[type='number'] {
+      width: 25% !important; } }
+
+.number button {
+  background-color: #ff4f57;
+  font-weight: 600; }
+  @media (max-width: 992px) {
+    .number button {
+      width: 100% !important; } }
+
+.star-rating li {
+  font-size: 1.3em;
+  color: #f2b827; }
+
+.s-p-desc textarea, .s-p-desc input {
+  background-color: #DDD; }
+.s-p-desc textarea {
+  height: 150px; }
+.s-p-desc button {
+  background-color: #ff4f57;
+  font-weight: 600; }
+.s-p-desc .nav-tabs a {
+  border: none !important; }
+.s-p-desc .nav-tabs .nav-item a.active {
+  border-bottom: 1px solid #ff4f57 !important; }
+
+.related-products h5 {
+  font-weight: 600; }
+.related-products button {
+  background-color: #ff4f57;
+  font-weight: 600; }
+.related-products .related-size div:first-child {
+  transition: all .3s ease; }
+  .related-products .related-size div:first-child:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0.5rem 0.4rem rgba(0, 0, 0, 0.15) !important; }
+
+aside a {
+  transition: all .4s ease;
+  color: #333; }
+  aside a:hover {
+    color: #ff4f57; }
+aside span {
+  color: #656565;
+  font-weight: 600; }
+
+.showing select {
+  width: 35%; }
+  @media (max-width: 992px) {
+    .showing select {
+      width: 100% !important; } }
+
+.ava-products .related-size {
+  margin: 8px 0;
+  transition: .3s; }
+  .ava-products .related-size:hover {
+    transform: translateY(-10px); }
+.ava-products h5 {
+  font-weight: 600; }
+.ava-products button {
+  background-color: #ff4f57; }
+.ava-products li {
+  width: 50px;
+  height: 50px; }
+  .ava-products li a {
+    border-radius: 0 !important;
+    font-weight: 600;
+    transition: .5s; }
+    .ava-products li a.active, .ava-products li a:hover {
+      background-color: #ff4f57 !important;
+      color: #FFF !important; }
+
+.search-pro input {
+  border-radius: 0 !important; }
+  .search-pro input:focus {
+    border: 1px solid #ff4f57 !important;
+    box-shadow: none !important; }
+
+/*# sourceMappingURL=zoom-style.css.map */
