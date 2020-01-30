@@ -1,0 +1,11 @@
+@mixin media992($size){
+  @-webkit-media(max-width: #{$size}){
+    @content;
+  }
+  @-moz-media(max-width: #{$size}){
+    @content;
+  }
+  @media(max-width: #{$size}){
+    @content;
+  }
+}

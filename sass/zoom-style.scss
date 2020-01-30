@@ -1,0 +1,182 @@
+@import 'helpers/vars.scss';
+
+body{
+  background-color: #f9f9f9
+}
+.current-product{
+
+  & + ul li{
+    cursor: pointer;
+    transition: .5s;
+
+  }
+  li{
+    width: 0;
+  }
+  li.active{
+    width: 100%;
+  }
+}
+.clickSlide{
+  opacity: .4
+}
+
+.clickSlide.active{
+  opacity: 1
+}
+
+.product-desc{
+  span,a{
+    color: $main-color
+  }
+
+}
+
+
+input[type='number']{
+  background-color: #EEE;
+
+  @media(min-width:1280px){
+    width: 25% !important
+  }
+}
+
+.number{
+  button{
+    background-color: $main-color;
+    font-weight: 600;
+
+
+    @media (max-width:992px){
+      width: 100% !important;
+    }
+  }
+
+
+}
+
+.star-rating{
+  li{
+    font-size: 1.3em;
+    color: $gold-color
+  }
+}
+
+.s-p-desc{
+  textarea,input{
+    background-color: #DDD;
+  }
+  textarea{
+    height: 150px;
+  }
+
+  button{
+    background-color: $main-color;
+    font-weight: 600
+  }
+
+  .nav-tabs{
+    a{
+      border: none !important
+    }
+
+    .nav-item a.active{
+      border-bottom: 1px solid $main-color !important
+    }
+  }
+}
+
+
+.related-products{
+  h5{
+    font-weight: 600
+  }
+
+  button{
+    background-color: $main-color;
+    font-weight: 600
+  }
+
+  .related-size{
+
+    div:first-child{
+      transition: all .3s ease;
+      &:hover{
+        transform: translateY(-10px);
+        box-shadow: 0 .5rem .4rem rgba(0,0,0,.15) !important
+      }
+    }
+
+  }
+}
+
+
+aside{
+  a{
+    transition: all .4s ease;
+    color: $text-color2;
+    &:hover{
+      color: $main-color
+    }
+  }
+
+  span{
+    color: $text-color1;
+    font-weight: 600
+  }
+}
+
+// Start Product Category Page
+.showing{
+  select{
+    width: 35%;
+    @media(max-width: 992px){
+      width: 100% !important
+    }
+  }
+}
+
+.ava-products{
+  .related-size{
+    margin: 8px 0;
+    transition: .3s;
+    &:hover{
+      transform: translateY(-10px);
+    }
+  }
+  h5{
+    font-weight: 600;
+  }
+  button{
+    background-color: $main-color
+  }
+
+  li{
+    width: 50px;
+    height: 50px;
+    a{
+      border-radius: 0 !important;
+      font-weight: 600;
+      transition: .5s;
+
+    &.active,
+    &:hover{
+      background-color: $main-color !important;
+      color: #FFF !important;
+    }
+  }
+  }
+
+
+}
+
+.search-pro{
+  input{
+    border-radius: 0 !important;
+
+    &:focus{
+      border: 1px solid $main-color !important;
+      box-shadow: none !important
+    }
+  }
+}

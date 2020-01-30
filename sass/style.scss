@@ -1,0 +1,1137 @@
+@import 'helpers/vars.scss';
+@import 'mixins/mixin.scss';
+@import 'mixins/media.scss';
+
+/* Global */
+html{
+  scroll-behavior: smooth;
+}
+%top-left{ top: 0; left: 0; }
+%top-left-50{top: 50%; left: 50%}
+%common-overlay{
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1
+}
+%common-shadow{
+  box-shadow: 0 16px 38px -12px rgba(0,0,0,.56),0 4px 25px 0 rgba(0,0,0,.12),0 8px 10px -5px rgba(0,0,0,.2) !important;
+}
+%common-shadow2{
+  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0 rgba(230, 230, 230, 0.12), 0 8px 10px -5px rgba(241, 238, 238, 0.2) !important;
+}
+@mixin back-img($src){
+  background-image: url($src);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+// Start Header
+header{
+  background-color: $main-color;
+  color: $white-color;
+
+  a{
+    @include transition(all .3s linear);
+    color: $white-color;
+
+    &:hover{ color: $hovlink1; text-decoration: none; }
+  }
+}
+// End Header
+
+//Start Nav
+nav{
+  height: 65px;
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+  .navbar-collapse{
+    height: 65px;
+    z-index: 130;
+    background-color: $white-color;
+    @include media992(992px){ position: absolute; width: 100%; top: 100%; left: 0;}
+    .navbar-nav{
+      height: 100%;
+    }
+  }
+
+  img{ max-height: 65px }
+
+  li,a{ cursor: pointer; font-weight: 600; height: 100% }
+
+
+  li:last-of-type:not(.drop){
+    background-color: $main-color;
+    width: 40px;
+    height: 40px;
+    @include media992(992px){ width: 100%; border-radius: 0 !important; margin-left: 0 !important }
+  }
+  li.active a:not(.drop-link), li:hover > a:not(.drop-link){ color: $main-color !important }
+
+  .nav-link:hover + .dropdown-men,
+  .dropdown-men:hover{
+    transform: translateY(0);
+    opacity: 1;
+    z-index: 10;
+  }
+  .dropdown-men{
+    top: 100%;
+    left: 0;
+    min-width: 260px;
+    transform: translateY(15px);
+    opacity: 0;
+    z-index: -10;
+    transition: .5s;
+    a{
+      font-weight: 500;
+      transition: .5s;
+
+      &:not(.last){
+      border-bottom: 1px solid rgba(0,0,0,.1);
+    }
+  }
+
+
+    a.active,a:hover{
+      background-color: $main-color;
+      color: #FFF !important
+    }
+
+
+  }
+}
+
+//Search Overlay
+.search-overlay{
+    @extend %top-left;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    background-color: rgba($main-color,.9);
+    transform: translateY(-50%);
+    opacity: 0;
+    @include transition(all .5s ease-in-out);
+
+    .form-control{ height: 38px; border:0 }
+    button{ right: 3%; top: 3%; font-size: 40px; }
+
+  .input-group{
+
+    >div{
+      background-color: $text-color2;
+      height: 38px;
+      align-items: center;
+      color: $white-color;
+      width: 5%;
+      cursor: pointer;
+
+      .form-control{ display: block !important; width: 80% !important; }
+
+      @include media992(992px){ width: 18%; }
+    }
+
+    @include media992(992px){ width: 100% !important; }
+  }
+}
+
+.show-search-overlay{ opacity: 1; z-index: 2000; transform: translate(0); }
+//End Nav
+
+// Start carousel
+.main-slider{
+  .carousel-indicators{
+    li{ width: 15px; height: 15px; a{ z-index: 120 !important } }
+    li:not(.active){ background-color: $main-color }
+  }
+
+  .carousel-caption{
+    @extend %top-left-50;
+    transform: translate(-50%,-50%) !important;
+    width: 80% !important;
+
+    p{ font-size: 24px; font-weight: 100; }
+    h1{ font-weight: bold }
+    button{ background-color: $main-color; width: 14%; color: $white-color; border: 1px solid $main-color}
+    button:last-of-type{ background-color: transparent; }
+
+    button:first-of-type:hover{
+      background-color: transparent
+    }
+    button:last-of-type:hover{
+      background-color: #FFF;
+      color: $text-color2 !important
+    }
+  }
+
+  .carousel-inner::before{
+    content: '';
+    position: absolute;
+    @extend %top-left;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.82);
+    z-index: 1
+  }
+
+  .slide-dir{
+    z-index: 120;
+    width: 50px;
+    height: 50px;
+    background-color: $main-color;
+    top: 50%;
+  }
+}
+// End carousel
+
+// Start Programs
+.programs{
+  background-image: url('../imgs/programs/back.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 2;
+
+  &::before{ @extend %common-overlay; background-color: rgba(255,255,255,.9); }
+
+  h3{ line-height: 1.5 }
+
+  .card{
+    h4{ font-weight: bold; }
+    border: 0;
+    @include transition(all .5s ease-in-out);
+
+    &:hover{
+      background-color: $white-color !important;
+      @extend %common-shadow;
+      border-color: transparent !important
+    }
+  }
+  .card{ border: 1px solid $main-color; background-color: transparent }
+
+  .row{
+    div:nth-child(3){
+      .card{
+        background-color: $white-color !important;
+        @extend %common-shadow;
+        border: 0
+      }
+    }
+  }
+
+  i{ top: -10%; width: 50px; height: 50px; left: 50%; transform: translateX(-50%); color: $white-color }
+
+  .fa-atlassian{ background-color: #436eee }
+
+  .fa-brain{ background-color: $main-color }
+
+  .fa-bullhorn{ background-color: #783393 }
+
+  button{ background-color: $main-color; border: 0; color: $white-color; }
+}
+// End Programs
+
+// Start Welcome
+.welcome{
+  background-image: url(../imgs/welcome/stu.png);
+  background-repeat: no-repeat;
+  background-position: 95% 100%;
+  @include media992(1200px){ background: none }
+
+  article{
+    i{
+      line-height: 45px;
+      background-color: $main-color;
+      width: 45px;
+      height: 45px;
+      color: $white-color
+    }
+    p{
+      margin-left: 70px;
+      color: $text-color2;
+      font-size: 1em
+    }
+  }
+}
+// End Welcome
+
+// Start feature-courses
+.feature-courses{
+  background-color: $f7;
+  .flex-column{
+    @include transition(all .5s ease);
+    opacity: 0;
+    p{
+      font-size: 1.2em
+    }
+    span{
+      color: $main-color;
+      font-size: 2em
+    }
+    p,span{
+      transform: scale(1.5);
+      @include transition(all .5s ease);
+    }
+  }
+  .teacher-con{
+    top: 50%;
+    transform: translateY(-85%);
+    @include media992(1200px){
+      display: none !important
+    }
+    img{
+        width: 60px !important;
+        height: 60px !important;
+        border: 5px solid $white-color;
+      }
+  }
+
+  .course-card-overlay{
+    background-color: rgba(0,0,0,0.7)
+  }
+
+  .card{
+    border-radius: 0 !important;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+    @include transition(all .3s linear);
+
+    &:hover .flex-column{
+      opacity: 1
+    }
+
+    &:hover .flex-column p,
+    &:hover .flex-column span{
+      transform: scale(1);
+    }
+    &:hover{
+      box-shadow: 0 1px 10px 3px rgba(0,0,0,.2);
+    }
+    >img{
+      border-radius: 0 !important;
+    }
+    p{
+      color: $text-color1
+    }
+
+    button{
+      background-color: $main-color;
+      color: $white-color
+    }
+  }
+  .row {
+    h2{
+      letter-spacing: 1px
+    }
+}
+}
+// End feature-courses
+
+// Start Free Training
+.free-training{
+  @include media992(576px){
+    padding-bottom: 0 !important;
+  }
+  z-index: 1;
+  @include back-img('../imgs/free-training/1.png');
+
+  &::after{
+    @extend %common-overlay;
+    background-color: rgba(0,0,0,.9)
+  }
+  .timing{
+    h2{
+      line-height: 1.7;
+      letter-spacing: 1px
+    }
+
+    ul{
+      li{
+        width: 23%;
+        span{
+          font-size: 2em;
+          color: $main-color
+        }
+
+        @include media992(576px){
+          width: 60%;
+          margin: 15px auto;
+        }
+      }
+      @include media992(576px){
+        flex-direction: column;
+      }
+    }
+  }
+
+  .sign-up{
+    form{
+      width: 85%;
+      input{
+        background-color: $f7;
+        box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+        padding: 10px 5px;
+        width: 90%
+      }
+      button{
+        background-color: $main-color;
+        color: $white-color;
+        font-weight: 600;
+        letter-spacing: 1px;
+        width: 30%
+      }
+      @include media992(992px){
+        width: 100%;
+        margin-top: 40px
+      }
+    }
+
+    @include media992(992px){
+      padding: 0 !important;
+    }
+  }
+
+}
+// End Free Training
+
+// Start choose-university
+.choose-university{
+  background-image: url(../imgs/c-u/1.png);
+  background-repeat: no-repeat;
+  background-position: 85% 100%;
+  @include media992(1200px){ background: none }
+
+  .row{
+    .row{
+      .row{
+          @include media992(992px){
+            text-align: center;
+          }
+
+          article{
+            h4{
+              margin: 10px 0
+            }
+          }
+      }
+    }
+  }
+  i{
+    background-color: $main-color
+  }
+
+  h4{
+    font-weight: 600
+  }
+}
+// End choose-university
+
+// Start Data
+.data{
+  z-index: 1;
+  @include back-img('../imgs/data/1.png');
+  &::after{
+    @extend %common-overlay;
+    background-color: rgba(0, 2, 13, 0.97)
+  }
+  hr{
+    border: 1.3px solid $main-color
+  }
+  span{
+    font-size: 2.5em
+  }
+  address{
+    font-size: 1.2em
+  }
+}
+
+// End Data
+
+// Start featured-faculty-members
+.featured-faculty-members{
+
+  h2{
+    letter-spacing: 1px
+  }
+  .card{
+    box-shadow: 0 2px 7px rgba(0,0,0,.15);
+    @include transition(all .3s linear);
+    img{
+      @include transition(all .3s linear);
+    }
+    &:hover{
+      @extend %common-shadow;
+
+      >img{
+        filter: grayscale(100%);
+      }
+    }
+    h2{ letter-spacing: 1px }
+    p{ color: $text-color2 }
+    address{ color: $text-color2 }
+    ul{
+      width: 90%;
+
+      li{
+        &:first-child{
+          a:hover{
+            background-color: #0056b3 !important
+          }
+        }
+
+        &:nth-child(2){
+          a:hover{
+            background-color: #00aced !important
+          }
+        }
+
+        &:nth-child(3){
+          a:hover{
+            background-color: #007bb6 !important
+          }
+        }
+
+        &:nth-child(4){
+          a:hover{
+            background-color: #007bb6 !important
+          }
+        }
+
+        &:nth-child(5){
+          a:hover{
+            background-color: #E62117 !important
+          }
+        }
+      }
+
+      .w-15{ width: 15%; }
+
+      a{
+        background-color: $f7;
+        box-shadow: 0 2px 5px rgba(0,0,0,.2);
+        @include transition(all .3s ease-in);
+        &:hover{
+          color: $white-color !important
+        }
+    }
+
+    }
+  }
+}
+// End featured-faculty-members
+
+// Start testimonial
+.testimonial{
+  @include back-img('../imgs/testimonial/1.png');
+  z-index: 1;
+
+  &::after{
+    @extend %common-overlay;
+    background-color: rgba(0,0,0,.9);
+  }
+
+  .carousel-indicators{
+    li{
+      width: 12px;
+      height: 12px;
+    }
+    li.active{
+      background-color: $main-color !important
+    }
+  }
+  .user-con{
+    left: 0;
+    top: 80%;
+  }
+  img{
+    width: 80px;
+    height: 80px;
+  }
+}
+// End testimonial
+
+// Start blog
+.blog{
+  i{
+    color: $main-color
+  }
+  button{
+    background-color: $main-color
+  }
+  .card{
+    @include transition(all .5s linear);
+
+    &:hover{
+      @extend %common-shadow;
+    }
+  }
+}
+// End Blog
+
+// Start News
+.news{
+  background-color: $hovlink1;
+
+  input[type='email']{
+    background-color: $f7;
+    font-weight: 600;
+  }
+
+  input[type='submit']{
+    background-color: $main-color;
+    font-weight: 600;
+  }
+}
+// End News
+
+// Start FooterInfo
+.footer-info{
+  background-color: $footer-info-back;
+
+  h5{
+    font-weight: 700;
+    letter-spacing: 1px
+  }
+  ul{
+    li{
+      color: $footer-text
+    }
+  }
+
+  i{
+    color: $main-color
+  }
+
+  .latest-news div{
+
+
+    img{
+      width: 90px;
+      height: 90px
+    }
+
+
+
+    span{
+      font-size: .8rem;
+      color: $footer-text
+    }
+  }
+
+  a{
+    color: $footer-text;
+
+    &:hover{
+      color: $main-color;
+      @include transition(all .3s linear);
+
+      &:hover{
+        color: $main-color
+      }
+    }
+  }
+
+  .image-gallery{
+    img{
+      width: 30%
+    }
+  }
+}
+// End Footer Info
+
+// Start Footer
+footer{
+  background-color: $last-footer;
+  color: $footer-text;
+
+  li{
+    width: 40px;
+    height: 40px;
+    line-height: 40px
+  }
+  a{
+    background-color: $text-color2;
+    @include transition(all .3s linear);
+
+    &:hover{
+      background-color: $main-color
+    }
+  }
+}
+// End Footer
+
+// Start Back To Top
+.b-t-t{
+  width: 50px;
+  height: 50px;
+  bottom: 10px;
+  right: 20px;
+  background-color: $main-color;
+  z-index: 998
+}
+
+.showbtn{
+  display: block !important;
+}
+// End Back To Top
+
+// Start Home2 Banner
+.home2-panner{
+  h1{
+    font-size: 3em;
+    @include media992(992px){ font-size: 2em}
+  }
+  @include back-img('../imgs/home2/banner.png');
+  z-index: 1;
+
+  &::after{
+    @extend %common-overlay;
+    background-color: rgba(0,0,0,.7)
+  }
+
+  .input-group{
+    .form-control{ height: 38px; border:0; }
+
+    >div{
+      height: 38px;
+      align-items: center;
+      color: $white-color;
+      width: 5%;
+      cursor: pointer;
+      background-color: $main-color;
+
+
+      @include media992(992px){ width: 18%; }
+
+    }
+  }
+  @include media992(992px){ width: 100% !important; }
+
+  ul{
+    i{
+      color: $main-color
+    }
+
+  }
+}
+// Start Home2 Banner
+
+// Start Home3 Panner
+.home3-panner{
+  @include back-img('../imgs/home3/1.png');
+  z-index: 1;
+  &::after{
+    @extend %common-overlay;
+    background-color: rgba(0,0,0,.7)
+  }
+
+  h1{
+    font-size: 3em;
+    letter-spacing: 1px
+  }
+
+  button{
+    background-color: $main-color;
+    font-weight: 600
+  }
+}
+// End Home3 Panner
+
+// Start Home3 programs
+.fac-features{
+  background-color: $f7;
+  i{
+    position: static !important;
+    color: $main-color;
+  }
+  .row{
+    .card{
+        border: 0 !important;
+        box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+        @include transition(all .3s linear);
+
+        &:hover{
+          @extend %common-shadow;
+        }
+        h5{
+          font-weight: bold;
+        }
+        button{
+          border: 0;
+          background-color: $main-color;
+          color: $white-color;
+        }
+    }
+  }
+}
+
+// End Home3 programs
+
+// Start Home3 About INSTITUTE
+.about-institute{
+  p{
+    color: $text-color2
+  }
+  button{
+    background-color: $main-color
+  }
+}
+// End Home3 About INSTITUTE
+
+// Start Home3 data
+.data{
+  .row{
+    +div{
+      @include media992(992px){ display: flex; justify-content: center; align-items: center; align-content: center; flex-direction: column;}
+        button{
+          width: 18%;
+
+          @include media992(992px){ width: 30%; margin: 12px 0 !important}
+          @include media992(576px){ width: 100%; margin: 12px 0 !important}
+        }
+        button:first-child{
+          background-color: $main-color
+        }
+
+        button:last-child{
+          background-color: transparent
+        }
+
+    }
+  }
+
+}
+// End Home3 data
+
+// Owl Carousel Custom
+.home3-feature-courses{
+  .teacher-con{
+    transform: translateY(-120%) !important;
+  }
+
+  button:last-of-type{
+    background-color: $main-color;
+    font-weight: 600
+  }
+}
+.owl-stage-outer{
+  padding: 60px 0 0;
+}
+
+.owl-nav{
+  position: absolute;
+  width: 30%;
+  top: 0;
+  right: 0;
+  text-align: right;
+  @include media992(576px){ width: 100%;}
+  button{
+    outline: none;
+    width:60px !important;
+    height:60px !important;
+    :first-of-type{
+      margin-right: 5px
+    }
+    span{
+      display: block;
+      background-color: $main-color;
+      padding: 10px;
+      font-size: 20px;
+      color: $white-color
+    }
+  }
+}
+
+// short intro video
+.show-video{
+  transform: scale(1) rotateX(0deg) !important;
+}
+
+.video-overlay{
+  @extend %top-left;
+  width: 100%;
+  height: 100%;
+  z-index: 1030;
+  background-color: rgba(#000,.9);
+  transform: scale(0) rotateX(90deg);
+  @include transition(all .2s linear);
+  .embed-responsive{
+    width: 80%;
+    height: 80%
+  }
+}
+// Start Home3 short-intro
+.short-intro{
+  background-color: $main-color;
+
+  .video{
+    div{
+      @extend %common-shadow2;
+      cursor: pointer;
+      &::after{
+        @extend %common-overlay;
+        z-index: 0 !important;
+        background-color: rgba(#000,.5)
+      }
+
+      &::before{
+        content: "\f04b";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 50px;
+        color: $white-color;
+        position: absolute;
+        @extend %top-left;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include transition(all .3s linear);
+      }
+
+      &:hover{
+        &::before{
+          transform: scale(1.2);
+          color: $main-color
+        }
+      }
+    }
+  }
+  span{
+    color: #DDD;
+    letter-spacing: 1px
+  }
+  button{
+    background-color: transparent;
+    @include transition(all .3s linear);
+    &:hover{
+      background-color: $white-color;
+      color: $main-color !important;
+    }
+  }
+}
+// End Home3 short-intro
+
+
+// Start Home3 Apply
+.apply{
+  .next-student{
+    background-color: $f7;
+  }
+  button{
+    background-color: $main-color
+  }
+}
+// End Home3 Apply
+
+
+// Start Course Details
+.course-details{
+  background-color: $f7;
+  .main-course{
+    h2{letter-spacing: 1px}
+    img{
+      width: 50px;
+    }
+    button{
+      background-color: $main-color
+    }
+    span{
+      font-weight: 700;
+      font-size: .7em;
+      border-color: $f7 !important
+    }
+    del{
+      line-height: 2;
+      font-size: 1.4em
+    }
+
+
+  }
+
+  .course-list{
+
+    .teachers
+    {
+      height: 317px;
+    }
+    .list{
+      height: 425px;
+    }
+    ul{
+
+      li{
+        .img{
+          width: 60px;
+          height: 60px;
+        }
+        a{
+            @include transition(all .3s linear);
+            &:hover{
+              color: $main-color !important;
+            }
+        }
+
+        div:last-of-type{
+          a:first-child{
+              font-weight: 600
+          }
+        }
+
+        i{
+          color: $main-color;
+        }
+      }
+      p{
+        font-size: .9em !important
+      }
+    }
+
+  }
+
+  .categories{
+    a{
+      font-weight: 500;
+    }
+  }
+
+  .course-features{
+    a{
+      font-weight: 600;
+    }
+    .list-group-item.active{
+      background-color: $main-color !important;
+    }
+
+    i{
+      color: $main-color;
+    }
+
+    .list-group{
+      border-width: 5px !important;
+      border-color: $main-color !important;
+    }
+  }
+
+  hr{
+    border-top-color: $main-color !important;
+  }
+
+  .tab-pane{
+    ul{
+      li:last-of-type{
+          border: none !important
+      }
+    }
+  }
+
+  .stars{
+    i{
+      color: $gold-color !important
+    }
+  }
+
+  .progress-bar{
+    background-color: $text-color2 !important
+  }
+}
+// End Course Details
+
+// Start About
+.intro{
+  p{
+    color: $text-color1;
+  }
+  .desc{
+    i{
+      color: $main-color;
+    }
+  }
+}
+
+.student-say{
+  background-color: $f7;
+
+  button{
+    font-weight: 600;
+  }
+
+  span{
+    @include transition(all .3s linear);
+  }
+}
+
+.research-areas{
+  z-index: 1;
+  @include back-img('../imgs/about/1.png');
+  &::before{ @extend %common-overlay; background-color: rgba(255,255,255,.95); }
+
+  .nav-tabs{
+    border: none !important;
+    ul,li,a{
+      border: none !important
+    }
+
+  }
+
+  i{
+    color: $main-color
+  }
+
+  a.active{
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-link{
+    border-radius: 4px
+  }
+}
+// End About
+
+// Start Events
+.evpadding{
+  padding-top: 100px !important;
+}
+
+.evpadding2{
+  padding-top: 90px !important;
+}
+.evCard{
+  i{
+    color: $main-color
+  }
+  button{
+    background-color: $main-color;
+    border-radius: 0
+  }
+}
+// End Events
+
+// Business Development Event
+.b-d-event{
+  background-color: $f7;
+  button{
+    background-color: $main-color;
+    border-radius: 0;
+    font-weight: 600;
+  }
+
+  .jumbotron{
+    border-radius: 0;
+
+    a{
+      color: $main-color
+    }
+  }
+
+  .evlinks{
+    a{
+      @include transition(all .3s linear);
+      &:hover{
+        color: $main-color !important;
+      }
+    }
+  }
+}
+// Business Development Event

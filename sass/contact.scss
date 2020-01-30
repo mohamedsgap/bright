@@ -1,0 +1,35 @@
+@import 'helpers/vars.scss';
+
+form{
+  input,
+  textarea{
+    background-color: #EEE;
+    border-bottom: 1px solid transparent !important;
+    transition: .4s;
+  }
+
+  input{
+    width: 48%;
+  }
+  textarea{
+    height: 250px;
+  }
+
+  input:focus,
+  textarea:focus{
+    border-bottom: 1px solid $main-color !important;
+  }
+
+  button{
+    background-color: $main-color !important
+  }
+}
+
+.contact-in{
+  p{
+    color: $text-color1;
+  }
+  i{
+    color: $main-color
+  }
+}

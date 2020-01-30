@@ -1,0 +1,154 @@
+@import 'helpers/vars.scss';
+body{
+  background-color: #f9f9f9
+}
+
+main{
+  h4{
+    font-weight: 600;
+  }
+
+  hr{
+    width: 95%
+  }
+
+  .imp-list{
+    i{
+      color: $main-color
+    }
+  }
+
+  small{
+    transition: .5s;
+  }
+  a:hover small{
+    color: $main-color !important
+  }
+
+  .zabid {
+    img{
+      width: 180px;
+      height: auto;
+    }
+
+    .social{
+      a{
+        width: 35px;
+        height: 35px;
+        background-color: #f9f9f9;
+        box-shadow: 0 2px 4px rgba(0,0,0,.2);
+        transition: .5s;
+        &:hover{
+          color: #FFF !important;
+        }
+      }
+
+      li:nth-child(1){
+        a:hover{
+          background-color: #3b5998
+        }
+      }
+
+      li:nth-child(2){
+        a:hover{
+          background-color: #00aced
+        }
+      }
+
+      li:nth-child(3),
+      li:nth-child(4){
+        a:hover{
+          background-color: #007bb6
+        }
+      }
+
+
+      li:nth-child(5){
+        a:hover{
+          background-color: #E62117
+        }
+      }
+    }
+  }
+
+  .n-and-p{
+    button{
+      background-color: $main-color
+    }
+  }
+
+  .single-blog-form{
+    button{
+      background-color: $main-color
+    }
+
+    textarea{
+      background-color: #f9f9f9;
+      height: 180px;
+      transition: .5s;
+    }
+
+    input{
+      border:1px solid #d1d1d1;
+      transition: .3s;
+    }
+
+    input:focus{
+      border-color: $main-color
+    }
+
+    textarea:focus{
+      border-bottom: 1px solid $main-color !important;
+      box-shadow: none !important
+    }
+  }
+}
+
+aside{
+  a{
+    color: #505050;
+    transition: .3s;
+  }
+  i{
+    color: $main-color
+  }
+
+  .cat-ul{
+    li:last-child{
+      border: none !important;
+      a{
+        padding-bottom: 0 !important
+      }
+    }
+
+    a{
+      &:hover{
+        color: $main-color;
+      }
+    }
+  }
+
+  .bolg-tags{
+    a{
+      background-color: $main-color;
+      color: #FFF
+    }
+  }
+
+  input:focus{
+    border: 1px solid $main-color !important;
+    box-shadow: none !important
+  }
+
+  .recent-topics{
+    a:hover{
+      color: $main-color !important
+    }
+  }
+
+  .your-data{
+    button{
+      background-color: $main-color
+    }
+  }
+}
